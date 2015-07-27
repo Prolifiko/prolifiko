@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "node test/*.js",
-    "jshint": "jshint --exclude-path .gitignore ."
+    "jshint": "jshint --exclude-path .gitignore .",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
     "mongodb": "^2.0.39"
   },
   "devDependencies": {
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "hapi": "^8.8.0",
+    "tape": "^4.0.1"
   }
 }
