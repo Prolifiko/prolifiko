@@ -1,7 +1,8 @@
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
+require('dotenv').load();
 
-var url = 'mongodb://localhost:27017/prolifiko';
+var url = process.env.MONGOLAB_URI;
 
 MongoClient.connect(url, function (err, db) {
 
