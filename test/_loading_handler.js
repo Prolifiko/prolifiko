@@ -12,7 +12,7 @@ test("Testing server routes", function(t) {
     t.equal(response.statusCode, 200, "Loading page route works");
 
     var $ = cheerio.load(response.result);
-    t.equal('Kickstart and continue your coding habit', $('h1').text(), 'checking the content of the heading');
+    t.equal('Kickstart and continue your blogging habit', $('h1').text(), 'checking the content of the heading');
 
     server.stop();
     t.end();
