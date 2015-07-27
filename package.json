@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/*.js",
+    "test": "mongod --dbpath=./data --port 27018 & node test/*.js && pkill mongod",
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js"
   },
