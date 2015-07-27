@@ -27,9 +27,13 @@ html {
     box-sizing: inherit;
 }
 
-#content {
+html {
   background-color: #F5F5F5;
-  height: 100vh;
+
+}
+
+#content {
+  /*height: 100vh;*/
   text-align:center;
   display: flex;
   display: -webkit-flex;
