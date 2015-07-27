@@ -1,6 +1,7 @@
 var Hapi = require('hapi');
 var server = new Hapi.Server();
 var routes = require('./api/routes.js');
+var google = require('./api/handlers/google_handler.js');
 require('dotenv').load();
 
 server.connection({
@@ -28,10 +29,7 @@ server.register(require('bell'), function (err) {
         path: '/login',
         config: {
             auth: 'google',
-            handler: function (request, reply) {
-                console.log(request, reply);
-                return reply.redirect('/');
-            }
+            handler: google.login,
         }
     });
 
