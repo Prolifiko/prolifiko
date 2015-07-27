@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/*.js"
+    "test": "node test/*.js",
+    "jshint": "jshint --exclude-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Prolifiko/prolifiko/issues"
   },
-  "homepage": "https://github.com/Prolifiko/prolifiko#readme"
+  "homepage": "https://github.com/Prolifiko/prolifiko#readme",
+  "dependencies": {
+    "mongodb": "^2.0.39"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0"
+  }
 }
