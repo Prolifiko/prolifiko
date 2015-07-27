@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "node test/*.js",
+    "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js"
   },
   "repository": {
@@ -21,9 +22,11 @@
   },
   "homepage": "https://github.com/Prolifiko/prolifiko#readme",
   "dependencies": {
-    "hapi": "^8.8.0"
+    "mongodb": "^2.0.39"
   },
   "devDependencies": {
+    "jshint": "^2.8.0",
+    "hapi": "^8.8.0",
     "tape": "^4.0.1"
   }
 }
