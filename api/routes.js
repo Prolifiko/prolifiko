@@ -1,4 +1,5 @@
 var loading_handler = require('./handlers/loading_handler.js');
+var landing_handler = require('./handlers/landing_handler.js');
 
 var routes = [
   {
@@ -20,6 +21,12 @@ var routes = [
     method: 'GET',
     path: '/',
       handler: loading_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/landingPage',
+      handler: landing_handler
   }
 
 ];
