@@ -19,7 +19,8 @@ server.register(require('bell'), function (err) {
         provider: 'google',
         password: 'cookie_encryption_password',
         clientId: process.env.GOOGLE_ID,
-        clientSecret: process.env.GOOGLE_SECRET
+        clientSecret: process.env.GOOGLE_SECRET,
+        isSecure: false
     });
 
     server.route({
