@@ -19,3 +19,6 @@ node_modules
 #store our secret stuff!
 env.json
 .env
+
+# test database
+data/*
