@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/*.js"
+    "test": "node test/*.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Prolifiko/prolifiko/issues"
   },
-  "homepage": "https://github.com/Prolifiko/prolifiko#readme"
+  "homepage": "https://github.com/Prolifiko/prolifiko#readme",
+  "dependencies": {
+    "hapi": "^8.8.0"
+  }
 }
