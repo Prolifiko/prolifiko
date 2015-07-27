@@ -14,6 +14,12 @@ var routes = [
   method: 'GET',
   path: '/loading',
     handler: loading_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/',
+      handler: loading_handler
   }
 
 ];

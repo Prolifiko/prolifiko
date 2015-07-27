@@ -19,13 +19,13 @@ legend {
 /*END RESET*/
 
 /*box-sizing*/
-html {
+/*html {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
 *, *:before, *:after {
     box-sizing: inherit;
-}
+}*/
 
 html {
   background-color: #F5F5F5;
