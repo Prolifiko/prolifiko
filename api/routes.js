@@ -17,11 +17,11 @@ var routes = [
     handler: loading_handler
   },
 
-  {
-    method: 'GET',
-    path: '/',
-      handler: loading_handler
-  },
+  // {
+  //   method: 'GET',
+  //   path: '/',
+  //     handler: loading_handler
+  // },
 
   {
     method: 'GET',
