@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/*.js",
+    "test": "./node_modules/tape/bin/tape test/*.js",
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js"
   },
