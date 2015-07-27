@@ -1,6 +1,7 @@
 var Hapi = require('hapi');
 var server = new Hapi.Server();
 var routes = require('./api/routes.js');
+require('dotenv').load();
 
 server.connection({
   host: '0.0.0.0',
