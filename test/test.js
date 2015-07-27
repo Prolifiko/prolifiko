@@ -4,11 +4,11 @@ var server = require('../app.js');
 test("Testing server routes", function(t) {
   var options = {
     method: "GET",
-    url: "/"
+    url: "/loading"
   };
 
   server.inject(options, function(response) {
-    t.equal(response.statusCode, 200, "Home page route works");
+    t.equal(response.statusCode, 200, "Loading page route works");
     server.stop();
     t.end();
   });
