@@ -1,0 +1,22 @@
+{
+  "name": "prolifiko",
+  "version": "1.0.0",
+  "description": "The web application Prolifiko",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prolifiko/prolifiko.git"
+  },
+  "author": "Anniva, SimonLab, rjmk, joshpitzalis",
+  "license": "GPL 2.0",
+  "bugs": {
+    "url": "https://github.com/Prolifiko/prolifiko/issues"
+  },
+  "homepage": "https://github.com/Prolifiko/prolifiko#readme"
+}
