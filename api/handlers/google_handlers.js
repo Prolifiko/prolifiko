@@ -6,9 +6,9 @@ function login (request, reply) {
     if (!result) {
       mongo.createUser(userId, function (err, result) {
         // set a cookie & go to tour
+        reply.redirect('/tour');
       });
-    } else { /* set a cookie & go to my progress */}
-    return reply.redirect('/loading');
+    } else { /* set a cookie & go to my progress */ return reply.redirect('/loading');}
   });
 }
 
