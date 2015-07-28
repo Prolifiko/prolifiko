@@ -2,6 +2,8 @@ var mongo = require('./mongo_handlers.js');
 
 function login (request, reply) {
   var userId = getId(request);
+  //request.auth.session.set({id:userId});
+  //console.log('request.auth');
   mongo.findUser(userId, function (err, result) {
     if (!result) {
       mongo.createUser(userId, function (err, result) {

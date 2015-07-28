@@ -1,4 +1,5 @@
 var Hapi = require('hapi');
+var Cookie= require('hapi-auth-cookie');
 var server = new Hapi.Server();
 var routes = require('./routes.js');
 require('dotenv').load();
@@ -19,6 +20,20 @@ server.register(require('bell'), function (err) {
     });
 
 });
+
+/*
+server.register(Cookie, function (err) {
+
+    server.auth.strategy('session', 'cookie', {
+        password: 'secret',
+        cookie: 'sid',
+        redirectTo: '/login',
+        isSecure: false
+    });
+});
+server.auth.default('session');
+*/
+
 
 server.route(routes);
 
