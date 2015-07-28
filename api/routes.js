@@ -14,27 +14,25 @@ var routes = [
             path: 'public'
         }
     }
-},
-{
-  method: 'GET',
-  path: '/loading',
-    handler: loading_handler
   },
 
-  // {
-  //   method: 'GET',
-  //   path: '/',
-  //     handler: loading_handler
-  // },
+  {
+    method: 'GET',
+    path: '/loading',
+      handler: loading_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/',
+      handler: loading_handler
+  },
 
   {
     method: 'GET',
 
     path: '/landingPage',
       handler: landing_handler
-
-    path: '/',
-      handler: loading_handler
   },
 
   {
