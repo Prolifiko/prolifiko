@@ -1,10 +1,15 @@
-module.exports = {
-  login: login,
-};
+var mongo = require('./mongo_handlers.js');
 
 function login (request, reply) {
-  console.log(getId(request));
-  return reply.redirect('/loading');
+  var userId = getId(request);
+  mongo.findUser(userId, function (err, result) {
+    if (!result) {
+      mongo.createUser(userId, function (err, result) {
+        // set a cookie & go to tour
+      });
+    } else { /* set a cookie & go to my progress */}
+    return reply.redirect('/loading');
+  });
 }
 
 var getId = compose(get('id'), get('profile'), get('credentials'), get('auth'));
@@ -25,3 +30,7 @@ function compose (){
     return result[0];
   };
 }
+
+module.exports = {
+  login: login,
+};
