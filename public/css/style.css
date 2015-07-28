@@ -73,7 +73,7 @@ a:link, a:visited {
 
   /*content page*/
 
-  .demo-card-square.mdl-card {
+  .mdl-card {
     width: 320px;
     height: 320px;
   }
