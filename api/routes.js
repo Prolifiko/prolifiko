@@ -1,5 +1,5 @@
 var loading_handler = require('./handlers/loading_handler.js');
-var google = require('./handlers/google_handler.js');
+var google = require('./handlers/google_handlers.js');
 
 var routes = [
   {

@@ -1,4 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
+require('dotenv').load();
 var url = process.env.MONGOLAB_URI;
 
 module.exports = {
