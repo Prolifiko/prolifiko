@@ -19,7 +19,6 @@ var insertDocuments = function (db, callback) {
     assert.equal(err, null);
     assert.equal(1, result.result.n);
     assert.equal(1, result.ops.length);
-    console.log(result.ops);
     callback(result);
   });
 };
@@ -33,4 +32,14 @@ MongoClient.connect(url, function (err, db) {
   insertDocuments(db, function() {
     db.close();
   });
+});
+
+MongoClient.connect(url, function (err, db){
+  console.log('First real test');
+  var users = db.collection('users');
+  // mongo.createUser(db, '1', function(result){
+  //   assert.equal(result.ops, {userId: 1, stars: {star1: false, star2: false, star3: false, star4: false, star5: false}, timestamps: []});
+  //   db.close();
+  // });
+  db.close();
 });

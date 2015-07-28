@@ -1,5 +1,9 @@
 var loading_handler = require('./handlers/loading_handler.js');
+
 var landing_handler = require('./handlers/landing_handler.js');
+
+var google = require('./handlers/google_handler.js');
+
 
 var routes = [
   {
@@ -25,8 +29,22 @@ var routes = [
 
   {
     method: 'GET',
+
     path: '/landingPage',
       handler: landing_handler
+
+    path: '/',
+      handler: loading_handler
+  },
+
+  {
+      method: ['GET', 'POST'],
+      path: '/login',
+      config: {
+          auth: 'google',
+          handler: google.login,
+      }
+
   }
 
 ];

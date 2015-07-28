@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/Prolifiko/prolifiko#readme",
   "dependencies": {
+    "bell": "^5.0.0",
     "dotenv": "^1.2.0",
     "hapi": "^8.8.0",
-    "mongodb": "^2.0.39"
+    "mongodb": "^2.0.39",
+    "riot": "^2.2.2"
   },
   "devDependencies": {
     "cheerio": "^0.19.0",
