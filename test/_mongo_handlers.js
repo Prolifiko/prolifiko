@@ -1,45 +1,54 @@
 var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
+var mongo = require('../api/handlers/mongo_handlers');
+var test = require('tape');
 require('dotenv').load();
 
 var url = process.env.MONGOLAB_URI;
 
-MongoClient.connect(url, function (err, db) {
-
-  assert.equal(null, err);
-
-  db.close();
-});
-
-var insertDocuments = function (db, callback) {
-  var collection = db.collection('users');
-  collection.insert([
-    {userId: 1, stars: {star1 : false}, timestamps: [], lastLogin: null},
-  ], function (err, result) {
-    assert.equal(err, null);
-    assert.equal(1, result.result.n);
-    assert.equal(1, result.ops.length);
-    callback(result);
-  });
-};
-
-MongoClient.connect(url, function (err, db) {
-
-  assert.equal(null, err);
-  console.log("Connected correctly to server");
-
-
-  insertDocuments(db, function() {
+test('connection to database working', function (t) {
+  MongoClient.connect(url, function (err, db) {
+    t.equal(null, err);
     db.close();
+    t.end();
   });
 });
 
-MongoClient.connect(url, function (err, db){
-  console.log('First real test');
-  var users = db.collection('users');
-  // mongo.createUser(db, '1', function(result){
-  //   assert.equal(result.ops, {userId: 1, stars: {star1: false, star2: false, star3: false, star4: false, star5: false}, timestamps: []});
-  //   db.close();
-  // });
-  db.close();
+
+test('Testing a user can be inserted', function (t) {
+  mongo.createUser(1, function (err, result) {
+    t.deepEqual(result.ops, [{_id: 1, steps: [], timestamps: []}], 'checking insertion works');
+    t.end();
+  });
+});
+
+test('We can get the user by id', function (t) {
+  mongo.findUser(1, function (err, result) {
+    t.deepEqual(result, {_id: 1, steps: [], timestamps: []}, 'checking insertion works');
+    t.end();
+  });
+});
+
+test('pressStar updates the timestamp property', function (t) {
+  mongo.pressStar(1, function (err, result) {
+    t.equal(!!err, false);
+    t.equal(result.modifiedCount, 1);
+    t.end();
+  });
+});
+
+test('pressStar called with "step" argument adds a true to the steps array', function (t) {
+  mongo.pressStar(1, true, function (err, result) {
+    mongo.findUser(1, function (err, result){
+      t.equal(result.steps.length, 1);
+      t.end();
+    });
+  });
+});
+
+test('Test the user can be deleted', function (t) {
+  mongo.deleteUser(1, function (err, result) {
+    t.equal(!!err, false);
+    t.equal(result.deletedCount, 1);
+    t.end();
+  });
 });
