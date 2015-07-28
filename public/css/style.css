@@ -2,19 +2,15 @@
   border:1px dotted black;
 }*/
 
-body {
-    background-color: #f0f0f2;
-    margin: 0;
-    padding: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-
-}
 #wrapper {
     width: 600px;
     margin: 5em auto;
     padding: 50px;
     background-color: #fff;
     border-radius: 1em;
+    /*display: flex;
+    flex-direction: column;*/
+    /*background-color: black;*/
 }
 a:link, a:visited {
     color: #9FA0A3;
@@ -22,9 +18,6 @@ a:link, a:visited {
     display:inline-block;
 }
 @media (max-width: 700px) {
-    body {
-        background-color: white;
-    }
 
     #wrapper {
         margin: 0 auto;
@@ -33,15 +26,11 @@ a:link, a:visited {
         width: 260px;
         padding-top: 30px;
 
+
     }
 
-    #navbar{
-      background-color: black;
-      width 100%;
-      height: 70px;
-    }
 
-    #title h2 {
+    #title h3 {
         color: #F1F1F1;
         width: auto;
         margin: .5em 0 ;
@@ -56,35 +45,32 @@ a:link, a:visited {
 
     div{
       text-align: center;
-      padding-top: 5px;
+      /*padding-top: 5px;*/
+      color: white;
+    }
+    .mdl-button{
+      width: 200px;
+      margin: 5px;
+      color: white;
     }
 
-    .star {
-        display: inline-block;
-        font-size: 32px;
-
+    .mdl-button{
+      color: white;
     }
-
-    .steps {
-        display: inline-block;
-        margin: 0 auto;
-        font-size: 32px;
-    }
-
-    p{
-      padding: 0;
-      margin: 0;
-      font-size: 22px;
+    .material-icons{
+      color: white;
     }
 
     #bonus{
-      padding: 30px;
+      padding-top: 20px;
+      color: white;
     }
-    #calendar{
+    .calendar{
       padding: 5px;
-      background-color: #FDE633;
       border-radius: 1em;
+      float: right;
     }
-
-
+    #cal{
+      color: black;
+    }
 }

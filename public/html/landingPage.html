@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>Prolifiko</title>
 
@@ -8,50 +8,103 @@
     <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1' />
 
-    <link rel='stylesheet' type='text/css' href='../css/style.css' />
+    <link rel='stylesheet' type='text/css' href='style.css' />
+     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.grey-yellow.min.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'> -->
 
 </head>
 
 <body>
 
-  <div id='navbar'>
+  <!-- <div id='navbar'>
     <div id = 'title'>
-      <h2>My Progress</h2>
-      <div id = 'burger'>
-        <a href='' class ='' >&#9776;</a>
+      <h3>My Progress</h3>
+
+      <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">My Progress</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
       </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Title</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
     </div>
-  </div>
+    <main class="mdl-layout__content">
+      <div class="page-content"><!-- Your content goes here --
+
+
+      <!-- <div id = 'burger'>
+        <a href='' class ='' >&#9776;</a>
+      </div> -->
+
 
   <div id='wrapper'>
   <div id='lessons'>
 
-    <div><p class='steps'><a href=''>Step 1</a></p>
-    <a href='' class='star'><img href=''>   &#9733;   </a></div>
+    <!-- Accent-colored raised button with ripple -->
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Step 1
+       <a href='' class='star'>   &#9733;   </a>
+       <!-- <a href='' class='star'>   &#9733;   </a> -->
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Step 2
+       <a href='' class='star'>   &#9733;   </a>
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Step 3
+       <a href='' class='star'>   &#9733;   </a>
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Step 4
+       <a href='' class='star'>   &#9733;   </a>
+    </button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Step 5
+       <a href='' class='star'>   &#9733;   </a>
+    </button>
 
-    <div><p class='steps'><a href=''>Step 2</a></p>
-    <a href='' class='star'><img href=''>   &#9733;   </a></div>
 
-    <div><p class='steps'><a href=''>Step 3</a></p>
-    <a href='' class='star'><img href=''>   &#9733;</a></div>
 
-    <div><p class='steps'><a href=''>Step 4</a></p>
-    <a href='' class='star'><img href=''>   &#9733;</a></div>
 
-    <div><p class='steps'><a href=''>Step 5</a></p>
-    <a href='' class='star'><img href=''>   &#9733;</a></div>
 
   </div>
   <div id='bonus'>
-    <p><a href=''>Bonus</a></p>
-    <p><a href=''>Quick Tips</a></p>
-    <p><a href=''>Build a Blogging Habit</a></p>
+    <!-- Flat button with ripple -->
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+      Bonus
+    </button>
+    <button class="mdl-button  mdl-js-button mdl-js-ripple-effect">
+      Quick Tips
+    </button>
+    <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+      Build a Blogging Habit
+    </button>
+
   </div>
-  <div id='calendar'>
-    <p><a href=''>View my progress</a></p>
+  <div class='calendar'>
+    <!-- Colored FAB button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons" id= 'cal'>event</i>
+</button>
   </div>
+</div>
+</div>
+</div>
+</div>
+</main>
 </div>
 </body>
 </html>
