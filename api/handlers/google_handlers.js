@@ -15,6 +15,7 @@ function login (request, reply) {
 var getId = compose(get('id'), get('profile'), get('credentials'), get('auth'));
 
 function get (property, object){
+  /*istanbul ignore if*/
   if (object) { return object[property]; }
   return function (obj){ return obj[property]; };
 }
