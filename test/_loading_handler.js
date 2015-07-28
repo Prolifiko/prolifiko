@@ -15,6 +15,7 @@ test('testing loading route', function(t){
     t.equal(response.statusCode, 200);
     var $ = cheerio.load(response.result);
     t.equal($('h1')[0].children[0].data, 'Kickstart and continue your blogging habit');
+    server.stop();
     t.end();
   });
 });
