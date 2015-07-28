@@ -8,5 +8,7 @@ module.exports = {
   step_tags: require(__dirname + '/step.tag'),
   bonus_tag:require(__dirname + '/bonus.tag'),
   page_tags: require(__dirname + '/page.tag'),
-  calendar_button_tags: require(__dirname + '/calendar_button.tag')
+  calendar_button_tags: require(__dirname + '/calendar_button.tag'),
+  lesson_tags: require(__dirname + '/lesson.tag'),
+  content_page_tags: require(__dirname + '/content_page.tag')
 };
