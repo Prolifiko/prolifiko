@@ -1,99 +1,33 @@
-#wrapper {
-    width: 600px;
-    margin: 5em auto;
-    padding: 50px;
-    background-color: #fff;
-    border-radius: 1em;
-    /*display: flex;
-    flex-direction: column;*/
-    /*background-color: black;*/
+
+.mdl-button{
+  width: 200px;
+  margin: 5px;
+  color: white;
 }
-a:link, a:visited {
-    color: #9FA0A3;
-    text-decoration: none;
-    display:inline-block;
+
+.mdl-button{
+  color: white;
 }
-@media (max-width: 700px) {
+.material-icons{
+  color: white;
+}
 
-    #wrapper {
-        margin: 0 auto;
-        border-radius: 0;
-        padding: 0;
-        width: 260px;
-        padding-top: 30px;
+.calendar{
+  padding: 5px;
+  border-radius: 1em;
+  float: right;
+}
 
+.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+}
 
-    }
-
-
-    #title h3 {
-        color: #F1F1F1;
-        width: auto;
-        margin: .5em 0 ;
-        border-radius: 0;
-        padding: 0 1em;
-        display: inline-block;
-    }
-
-    #burger {
-        display: inline-block;
-    }
-
-
-    div{
-      text-align: center;
-      /*padding-top: 5px;*/
-      color: white;
-    }
-    .mdl-button{
-      width: 200px;
-      margin: 5px;
-      color: white;
-    }
-
-    .mdl-button{
-      color: white;
-    }
-    .material-icons{
-      color: white;
-    }
-
-    #bonus{
-      padding-top: 20px;
-      color: white;
-    }
-    .calendar{
-      padding: 5px;
-      border-radius: 1em;
-      float: right;
-    }
-    #cal{
-      color: black;
-    }
-
-  /*content page*/
-
-  .mdl-card {
-    width: 320px;
-    height: 320px;
-  }
-  .demo-card-square > .mdl-card__title {
-    color: #fff;
-    background:
-      url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
-  }
-
-  .mdl-card__actions .mdl-card--border{
-    align-items: center;
-  }
-
-  /*star page*/
-
-  .goldStar{
-    /*font-size: 32px;*/
-    margin: auto;
-  }
-
-
-
+.mdl-card__actions .mdl-card--border{
+  align-items: center;
 }
