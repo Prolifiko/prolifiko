@@ -42,6 +42,9 @@ a:link, a:visited {
     #burger {
         display: inline-block;
     }
+    /*.mdl-layout{
+      display: inline-block;
+    }*/
 
     div{
       text-align: center;
