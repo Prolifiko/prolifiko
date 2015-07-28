@@ -21,7 +21,7 @@ server.register(require('bell'), function (err) {
 
 });
 
-/*
+
 server.register(Cookie, function (err) {
 
     server.auth.strategy('session', 'cookie', {
@@ -31,8 +31,9 @@ server.register(Cookie, function (err) {
         isSecure: false
     });
 });
-server.auth.default('session');
-*/
+
+//server.auth.default('session');
+
 
 
 server.route(routes);

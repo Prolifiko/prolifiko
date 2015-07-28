@@ -2,15 +2,13 @@ var mongo = require('./mongo_handlers.js');
 
 function login (request, reply) {
   var userId = getId(request);
-  //request.auth.session.set({id:userId});
-  //console.log('request.auth');
+  request.auth.session.set({id:userId});
   mongo.findUser(userId, function (err, result) {
     if (!result) {
       mongo.createUser(userId, function (err, result) {
-        // set a cookie & go to tour
         reply.redirect('/tour');
       });
-    } else { /* set a cookie & go to my progress */ return reply.redirect('/loading');}
+    } else {reply.redirect('/progress');}
   });
 }
 
