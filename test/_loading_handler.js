@@ -1,19 +1,20 @@
 var test = require('tape');
 var cheerio = require('cheerio');
 var server = require('../app.js');
+var shot = require('shot');
+var google = require('../api/handlers/google_handlers.js');
 
-test("Testing server routes", function(t) {
-  var options = {
-    method: "GET",
-    url: "/loading"
-  };
 
-  server.inject(options, function(response) {
-    t.equal(response.statusCode, 200, "Loading page route works");
+server.ext('onPreAuth', function (request, reply) {
+  request.auth.session.set({id:23});
+  reply.continue();
+});
 
+test('testing loading route', function(t){
+  server.inject({method: 'GET', url: '/loading'}, function(response){
+    t.equal(response.statusCode, 200);
     var $ = cheerio.load(response.result);
-    t.equal('Kickstart and continue your blogging habit', $('h1').text(), 'checking the content of the heading');
-
+    t.equal($('h1')[0].children[0].data, 'Kickstart and continue your blogging habit');
     server.stop();
     t.end();
   });

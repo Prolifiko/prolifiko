@@ -15,7 +15,8 @@ function createUser (id, callback) {
     users.insert({_id: id, steps: [], timestamps: []},
       function (err, result) {
         db.close();
-        if (err) { callback(err); }
+        /*istanbul ignore if*/
+        if (err) { callback(err); } 
         else { callback(null, result); }
       });
   });
@@ -26,6 +27,7 @@ function findUser (id, callback) {
     var users = db.collection('users');
     users.findOne({_id: id}, function (err, result) {
       db.close();
+      /*istanbul ignore if*/
       if (err) { callback(err); }
       else { callback(null, result); }
     });
@@ -41,6 +43,7 @@ function pressStar (id, step, callback) {
       {$push: update},
       function (err, result) {
         db.close();
+        /*istanbul ignore if*/
         if (err) { callback(err); }
         else { callback(null, result); }
       }
@@ -54,6 +57,7 @@ function deleteUser (id, callback){
     users.deleteOne({_id: id},
       function(err, result){
         db.close();
+        /*istanbul ignore if*/
         if (err) { callback(err); }
         else { callback(null, result); }
       });
