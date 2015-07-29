@@ -1,35 +1,42 @@
-var loading_handler = require('./handlers/loading_handler.js');
-var google = require('./handlers/google_handler.js');
+var loading_handler = require('./handlers/loading_handler');
+var google = require('./handlers/google_handlers');
+var user = require('./handlers/user_info_handlers');
 
 var routes = [
   {
     method: 'GET',
     path: '/public/{param*}',
     handler: {
-        directory: {
-            path: 'public'
-        }
+      directory: {
+        path: 'public'
+      }
     }
-},
+  },
 {
   method: 'GET',
   path: '/loading',
-    handler: loading_handler
+  handler: loading_handler
   },
 
   {
     method: 'GET',
     path: '/',
-      handler: loading_handler
+    handler: loading_handler
   },
 
   {
-      method: ['GET', 'POST'],
-      path: '/login',
-      config: {
-          auth: 'google',
-          handler: google.login,
-      }
+    method: ['GET', 'POST'],
+    path: '/login',
+    config: {
+      auth: 'google',
+      handler: google.login,
+    }
+  },
+
+  {
+    method: 'GET',
+    path: '/getMe',
+    handler: user,
   }
 
 ];
