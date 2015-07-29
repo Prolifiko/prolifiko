@@ -7,7 +7,23 @@ module.exports = {
   findUser: findUser,
   pressStar: pressStar,
   deleteUser: deleteUser,
+  getMe: getMe,
+  starRequest: starRequest,
 };
+
+function getMe (request, reply) {
+  findUser(request.state.sid.id, function (err, result) {
+    /* istanbul ignore if */
+    if (err) {reply(err);}
+    else {reply(result);}
+  });
+}
+
+function starRequest (request, reply){
+  pressStar(request.state.sid.id, function(){
+    reply.close();
+  });
+}
 
 function createUser (id, callback) {
   MongoClient.connect(url, function (err, db){
@@ -26,7 +42,7 @@ function findUser (id, callback) {
   MongoClient.connect(url, function (err, db) {
     var users = db.collection('users');
     users.findOne({_id: id}, function (err, result) {
-      
+
       db.close();
       /*istanbul ignore if*/
       if (err) { callback(err); }
