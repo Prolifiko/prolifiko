@@ -1,24 +1,26 @@
 /*RESET*/
+
 html, body, div, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, ol, ul, li, form, fieldset, legend, label, table, header, footer, nav, section {
-    margin: 0;
-    padding: 0;
-    border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
-
 ol, ul {
-    list-style: none;
+  list-style: none;
 }
-
 header, footer, nav, section, article, hgroup, figure {
-    display: block;
+  display: block;
+}
+legend {
+  display: none;
 }
 
-legend {
-    display: none;
-}
 /*END RESET*/
 
+
 /*box-sizing*/
+
+
 /*html {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -29,12 +31,10 @@ legend {
 
 html {
   background-color: #F5F5F5;
-
 }
-
 #content {
   /*height: 100vh;*/
-  text-align:center;
+  text-align: center;
   display: flex;
   display: -webkit-flex;
   flex-flow: column nowrap;
@@ -42,13 +42,11 @@ html {
   justify-content: flex-start;
   padding: 25vh 5vh 0 5vh;
 }
-
-#logo img{
+#logo img {
   border-radius: 50%;
   height: 20vh;
   border: solid 1vh black;
 }
-
 h1 {
   font-size: 4vh;
   padding: 5vh 0 0 0;
