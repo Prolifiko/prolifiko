@@ -1,3 +1,7 @@
+/**{
+  border: 1px dotted black;
+}*/
+
 html {
   background-color: #FFFFFF;
   text-align: center;
@@ -7,4 +11,9 @@ html {
   height: 10em;
   width: 10em;
   margin: auto;
+}
+
+.welcomeTour{
+  display: flex;
+  justify-content: center;
 }

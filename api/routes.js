@@ -1,5 +1,7 @@
 var tour_handler = require('./handlers/tour_handler.js');
 var welcome_handler = require('./handlers/welcome_handler.js');
+var welcome_content_handler = require('./handlers/welcome_content_handler.js');
+var star_handler = require('./handlers/star_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var user = require('./handlers/user_info_handlers');
@@ -19,7 +21,13 @@ var routes = [
   {
     method: 'GET',
     path: '/tour',
-      handler: tour_handler
+      handler: welcome_content_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/star',
+      handler: star_handler
   },
 
   {
