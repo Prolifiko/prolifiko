@@ -5,19 +5,15 @@ var url = process.env.MONGOLAB_URI;
 
 function contentRequest (request, reply) {
   addcontent(request.payload.screen, request.payload.content, function (err, result) {
-    console.log('HI');
     if(err) {reply(err);}
-    else{reply.end();}
+    else{reply.close();}
   });
 }
 
 function addcontent (screen, content, callback) {
 	MongoClient.connect(url, function (err, db) {
-    console.log('FDSDA');
-		var content = db.collection('content');
-    console.log('ALMOST');
-    content.insert({_id:screen, content:content}, function(err, result) {
-      console.log('AAAAA');
+    var contents = db.collection('contents');
+    contents.insert({_id:screen, content:content}, function(err, result) {
       db.close();
       if(err) { callback(err);}
       else{callback(null, result);}
