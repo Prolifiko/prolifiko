@@ -1,9 +1,10 @@
 html {
-  background-color: #9E9E9E;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
-#content-welcome-tour img{
-  border-radius: 50%;
-  border: solid black 5px;
+#content-welcome-tour img {
+  height: 10em;
+  width: 10em;
+  margin: auto;
 }
