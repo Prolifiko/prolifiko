@@ -2,6 +2,8 @@
 var loading_handler = require('./handlers/loading_handler');
 var google = require('./handlers/google_handlers');
 var user = require('./handlers/user_info_handlers');
+var content_handler = require('./handlers/content_handler');
+
 
 var routes = [
   {
@@ -39,15 +41,6 @@ var routes = [
     method: 'GET',
     path: '/getMe',
     handler: user,
-  },
-
-  {
-    method: ['GET', 'POST'],
-    path: '/login',
-    config: {
-        auth: 'google',
-        handler: google.login,
-    }
   },
 
       {
