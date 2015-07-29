@@ -1,7 +1,9 @@
 
 var loading_handler = require('./handlers/loading_handler');
+var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var user = require('./handlers/user_info_handlers');
+
 
 var routes = [
   {
@@ -14,16 +16,16 @@ var routes = [
     }
   },
 
-{
-  method: 'GET',
-  path: '/loading',
-  handler: loading_handler
+  {
+    method: 'GET',
+    path: '/loading',
+    handler: loading_handler
   },
 
   {
     method: 'GET',
-    path: '/',
-    handler: loading_handler
+    path: '/progress',
+    handler: progress_handler
   },
 
   {
