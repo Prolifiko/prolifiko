@@ -1,7 +1,4 @@
-var loading_handler = require('./handlers/loading_handler.js');
-var content_handler = require('./handlers/content_handler.js');
-var landing_handler = require('./handlers/landing_handler.js');
-
+var tour_handler = require('./handlers/tour_handler.js');
 var google = require('./handlers/google_handler.js');
 
 
@@ -18,22 +15,9 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/loading',
-    handler: loading_handler
+    path: '/tour',
+      handler: tour_handler
   },
-
-  {
-    method: 'GET',
-    path: '/',
-      handler: loading_handler
-  },
-
-  {
-    method: 'GET',
-    path: '/landingPage',
-    handler: landing_handler
-  },
-
   {
     method: ['GET', 'POST'],
     path: '/login',
@@ -43,11 +27,6 @@ var routes = [
     }
   },
 
-      {
-        method: 'GET',
-        path: '/content',
-        handler: content_handler
-      }
 ];
 
 module.exports = routes;
