@@ -1,6 +1,8 @@
 var tour_handler = require('./handlers/tour_handler.js');
 var welcome_handler = require('./handlers/welcome_handler.js');
-var google = require('./handlers/google_handler.js');
+var progress_handler = require('./handlers/progress_handler');
+var google = require('./handlers/google_handlers');
+var user = require('./handlers/user_info_handlers');
 
 
 var routes = [
@@ -8,9 +10,9 @@ var routes = [
     method: 'GET',
     path: '/public/{param*}',
     handler: {
-        directory: {
-            path: 'public'
-        }
+      directory: {
+        path: 'public'
+      }
     }
   },
 
@@ -30,11 +32,16 @@ var routes = [
     method: ['GET', 'POST'],
     path: '/login',
     config: {
-        auth: 'google',
-        handler: google.login,
+      auth: 'google',
+      handler: google.login,
     }
   },
 
+  {
+    method: 'GET',
+    path: '/getMe',
+    handler: user,
+  }
 ];
 
 module.exports = routes;
