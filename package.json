@@ -11,7 +11,8 @@
     "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js",
-    "nodemon": "nodemon app.js"
+    "nodemon": "nodemon app.js",
+    "watch:html": "nodemon --watch views --ext html --exec 'npm start'"
   },
   "repository": {
     "type": "git",

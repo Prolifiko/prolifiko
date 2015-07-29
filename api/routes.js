@@ -32,6 +32,12 @@ var routes = [
 
   {
     method: 'GET',
+    path: '/progress',
+      handler: progress_handler
+  },
+
+  {
+    method: 'GET',
     path: '/welcome',
       handler: welcome_handler
   },
