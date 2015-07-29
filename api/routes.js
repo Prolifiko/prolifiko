@@ -2,6 +2,9 @@ var tour_handler = require('./handlers/tour_handler.js');
 var welcome_handler = require('./handlers/welcome_handler.js');
 var welcome_content_handler = require('./handlers/welcome_content_handler.js');
 var star_handler = require('./handlers/star_handler.js');
+var legal_handler = require('./handlers/legal_handler.js');
+var hurrah_handler = require('./handlers/hurrah_handler.js');
+var content_handler = require('./handlers/content_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var user = require('./handlers/user_info_handlers');
@@ -32,7 +35,25 @@ var routes = [
 
   {
     method: 'GET',
+    path: '/legal',
+      handler: legal_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/hurrah',
+      handler: hurrah_handler
+  },
+
+  {
+    method: 'GET',
     path: '/progress',
+      handler: progress_handler
+  },
+
+  {
+    method: 'GET',
+    path: '/content',
       handler: progress_handler
   },
 

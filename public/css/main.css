@@ -17,8 +17,3 @@ html {
   display: flex;
   justify-content: center;
 }
-
-.bonus .button{
-  margin: 0;
-  padding:0;
-}
