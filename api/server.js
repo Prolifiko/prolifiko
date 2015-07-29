@@ -13,7 +13,7 @@ server.register(require('bell'), function (err) {
 
     server.auth.strategy('google', 'bell', {
         provider: 'google',
-        password: 'cookie_encryption_password',
+        password: process.env.GOOGLE_ENCRYPTION_PASSWORD,
         clientId: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET,
         isSecure: false
@@ -25,7 +25,7 @@ server.register(require('bell'), function (err) {
 server.register(Cookie, function (err) {
 
     server.auth.strategy('session', 'cookie', {
-        password: 'secret',
+        password: process.env.COOKIE_ENCRYPTION_PASSWORD,
         cookie: 'sid',
         redirectTo: '/login',
         isSecure: false

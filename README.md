@@ -5,6 +5,8 @@ The web application Prolifiko
 [![Build Status](https://travis-ci.org/Prolifiko/prolifiko.svg?branch=master)](https://travis-ci.org/Prolifiko/prolifiko)
 [![Code Climate](https://codeclimate.com/github/Prolifiko/prolifiko/badges/gpa.svg)](https://codeclimate.com/github/Prolifiko/prolifiko)
 [![Test Coverage](https://codeclimate.com/github/Prolifiko/prolifiko/badges/coverage.svg)](https://codeclimate.com/github/Prolifiko/prolifiko/coverage)
+[![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/graph/Prolifiko/prolifiko/master)
+
 
 ## Stages of work
 + [x] Interview with client
