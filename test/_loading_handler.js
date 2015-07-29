@@ -1,6 +1,6 @@
 var test = require('tape');
 var cheerio = require('cheerio');
-var server = require('../app.js');
+var server = require('../api/server.js');
 var shot = require('shot');
 var google = require('../api/handlers/google_handlers.js');
 

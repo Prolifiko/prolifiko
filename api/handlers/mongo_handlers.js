@@ -16,7 +16,7 @@ function createUser (id, callback) {
       function (err, result) {
         db.close();
         /*istanbul ignore if*/
-        if (err) { callback(err); } 
+        if (err) { callback(err); }
         else { callback(null, result); }
       });
   });
@@ -26,6 +26,7 @@ function findUser (id, callback) {
   MongoClient.connect(url, function (err, db) {
     var users = db.collection('users');
     users.findOne({_id: id}, function (err, result) {
+      
       db.close();
       /*istanbul ignore if*/
       if (err) { callback(err); }
