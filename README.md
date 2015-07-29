@@ -8,10 +8,16 @@ The web application Prolifiko
 [![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/graph/Prolifiko/prolifiko/master)
 
 
-##Stages of work
+## Stages of work
 + [x] Interview with client
 + [x] Wireframing and user stories
 + [x] Assigning difficulty and priority to user stories
 + [x] setup (agree on coding standards, git hub and file structure, heroku, databse, badges)
 + [x] set up Hapi server
-+ [ ] set up mongoDB
++ [x] set up mongoDB
+
+## Running the app and testing
+
+Make sure you run a mongo server : `mongod --dbpath=./data --port 27017`.
+
+You can then run with `npm start` and run with `npm test`.
