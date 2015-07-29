@@ -10,8 +10,8 @@ server.ext('onPreAuth', function (request, reply) {
   reply.continue();
 });
 
-test('testing loading route', function(t){
-  server.inject({method: 'GET', url: '/loading'}, function(response){
+test('testing loading route', function (t) {
+  server.inject({method: 'GET', url: '/loading'}, function (response) {
     t.equal(response.statusCode, 200);
     var $ = cheerio.load(response.result);
     t.equal($('h1')[0].children[0].data, 'Kickstart and continue your blogging habit');
