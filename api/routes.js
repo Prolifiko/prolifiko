@@ -1,3 +1,4 @@
+
 var loading_handler = require('./handlers/loading_handler');
 var google = require('./handlers/google_handlers');
 var user = require('./handlers/user_info_handlers');
@@ -12,6 +13,7 @@ var routes = [
       }
     }
   },
+
 {
   method: 'GET',
   path: '/loading',
@@ -38,7 +40,6 @@ var routes = [
     path: '/getMe',
     handler: user,
   }
-
 ];
 
 module.exports = routes;
