@@ -1,0 +1,9 @@
+html {
+  background-color: #9E9E9E;
+  text-align: center;
+}
+
+#content-welcome-tour img{
+  border-radius: 50%;
+  border: solid black 5px;
+}

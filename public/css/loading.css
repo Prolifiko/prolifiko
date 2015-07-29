@@ -29,27 +29,5 @@ legend {
 
 html {
   background-color: #F5F5F5;
-
-}
-
-#content {
-  /*height: 100vh;*/
-  text-align:center;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  justify-content: flex-start;
-  padding: 25vh 5vh 0 5vh;
-}
-
-#logo img{
-  border-radius: 50%;
-  height: 20vh;
-  border: solid 1vh black;
-}
-
-h1 {
-  font-size: 4vh;
-  padding: 5vh 0 0 0;
+  text-align: center;
 }
