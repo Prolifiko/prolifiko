@@ -20,8 +20,9 @@ function getMe (request, reply) {
 }
 
 function starRequest (request, reply){
-  pressStar(request.state.sid.id, function(){});
-  reply.close();
+  pressStar(request.state.sid.id, function(){
+    reply.close();
+  });
 }
 
 function createUser (id, callback) {
