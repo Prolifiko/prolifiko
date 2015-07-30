@@ -10,6 +10,7 @@ var google = require('./handlers/google_handlers');
 var mongo = require('./handlers/mongo_handlers');
 
 
+
 var routes = [
   {
     method: 'GET',
@@ -89,6 +90,7 @@ var routes = [
     path: '/starPush',
     handler: mongo.starRequest,
   }
+
 ];
 
 module.exports = routes;

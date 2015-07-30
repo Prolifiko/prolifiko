@@ -12,7 +12,8 @@
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js",
     "nodemon": "nodemon app.js",
-    "watch": "nodemon --watch views --ext html --exec 'npm start'"
+    "watch": "nodemon --watch views --ext html --exec 'npm start'",
+    "import-db": "mongoimport --db data --collection content --type json --file content/content.json --jsonArray"
   },
   "repository": {
     "type": "git",
@@ -31,8 +32,7 @@
     "hapi": "^8.8.0",
     "hapi-auth-cookie": "^3.0.1",
     "mongodb": "^2.0.39",
-    "nodemon": "^1.4.0",
-    "riot": "^2.2.2"
+    "nodemon": "^1.4.0"
   },
   "devDependencies": {
     "cheerio": "^0.19.0",

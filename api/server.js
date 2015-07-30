@@ -42,7 +42,7 @@ server.register(Cookie, function (err) {
     });
 });
 
-//server.auth.default('session');
+server.auth.default('session');
 
 
 
