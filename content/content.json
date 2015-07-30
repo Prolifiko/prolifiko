@@ -1,6 +1,7 @@
 [
   {
-    "tour" : [
+    "step": "tour",
+    "content": [
       {
         "title": "Welcome to Prolifiko",
         "text": []
