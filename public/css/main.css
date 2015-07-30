@@ -1,6 +1,6 @@
-/**{
-  border: 1px dotted black;
-}*/
+*{
+  /*border: 1px dotted black;*/
+}
 
 html {
   background-color: #FFFFFF;
@@ -16,4 +16,27 @@ html {
 .welcomeTour {
   display: flex;
   justify-content: center;
+}
+
+.dates{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+.oneDay{
+	margin: 0 auto;
+}
+
+.topbox{
+  margin: 0;
+  background-color: #FFF835;
+}
+
+.bottombox{
+  margin: 0;
+}
+
+.selected{
+  color: #FFF835;
 }

@@ -12,7 +12,7 @@
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js",
     "nodemon": "nodemon app.js",
-    "watch:html": "nodemon --watch views --ext html --exec 'npm start'"
+    "watch": "nodemon --watch views --ext html --exec 'npm start'"
   },
   "repository": {
     "type": "git",
