@@ -4,17 +4,14 @@
       <h2 class="mdl-card__title-text">{{title}}</h2>
     {{/if}}
   </div>
-  <div class="mdl-card__supporting-text">
-    {{#each tourContent}}
-      {{#if typeof this='STRING'}}
-        <ul>
-          {{#each this}}
-            <li> {{this}}</li>
-          {{/each}}
-        </ul>
-      {{else}}
-        <p>{{this}}</p>
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--2-col">
+      {{#if src}}
+        <img src={{src}} />
       {{/if}}
-    {{/each}}
+    </div>
+  </div>
+  <div class="mdl-card__supporting-text">
+    {{renderText}}
   </div>
 </div>

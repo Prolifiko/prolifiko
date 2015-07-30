@@ -12,18 +12,7 @@
       </div>
     </div>
     <div class="mdl-card__supporting-text">
-
-      {{#each tourContent}}
-        {{#if typeof this='STRING'}}
-          <ul>
-            {{#each this}}
-              <li> {{this}}</li>
-            {{/each}}
-          </ul>
-        {{else}}
-          <p>{{this}}</p>
-        {{/if}}
-      {{/each}}
+      {{{renderText}}}
     </div>
     <!-- view progress button -->
     <div class="mdl-grid">

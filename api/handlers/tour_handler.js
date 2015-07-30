@@ -12,7 +12,7 @@ function tour_handler (request, reply){
       nextStep = '/progress';
     }
     reply.view('tour', {
-      tourContent: content.text,
+      text: content.text,
       nextStep: nextStep,
       button: button,
       src: src,

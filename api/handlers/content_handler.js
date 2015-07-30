@@ -8,12 +8,8 @@ function contentHandler (step) {
       var content = data.content[stage];
       var nextStep = '/content/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
-      if (+stage + 1 === data.content.length) {
-        button = 'Sign Up';
-        nextStep = '/progress';
-      }
       reply.view('content', {
-        content: content.text,
+        text: content.text,
         nextStep: nextStep,
         button: button,
         src: src,
