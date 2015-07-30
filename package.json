@@ -13,7 +13,8 @@
     "start": "node app.js",
     "nodemon": "nodemon app.js",
     "watch": "nodemon --watch views --ext html --exec 'npm start'",
-    "import-db": "mongo prolifiko --eval 'db.content.drop()' && mongoimport --db prolifiko --collection content --type json --file content/content.json --jsonArray"
+    "import-db": "mongo prolifiko --eval 'db.content.drop()' && mongoimport --db prolifiko --collection content --type json --file content/content.json --jsonArray",
+    "update-content-trav": "travis encrypt-file content/content.json content/content.json.enc"
   },
   "repository": {
     "type": "git",
