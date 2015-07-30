@@ -4,11 +4,12 @@ var fs = require('fs');
 
 
 
-test('testing progress route', function (t) {
-  server.inject({method: 'GET', url: '/progress'}, function (response) {
+test('testing welcome tour content route', function (t) {
+  server.inject({method: 'GET', url: '/tour'}, function (response) {
     t.equal(response.statusCode, 200);
+    
     var contentBody= response.result;
-    var page = fs.readFileSync(__dirname + '/../views/progress.html', 'utf-8');
+    var page = fs.readFileSync(__dirname + '/../views/tour.html', 'utf-8');
     
     function isInBody (x, y ) {
     	if(x.indexOf(y) !==-1) {
