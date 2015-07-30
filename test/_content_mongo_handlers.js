@@ -14,8 +14,9 @@ test('connection to database working', function (t) {
   });
 });
 
+
 server.ext('onPreHandler', function (request, reply) {
-  request.payload = { screen: 'test', content: 'string' };
+  request.payload = { screen: 'testi', content: 'string' };
   console.log(request.payload);
   reply.continue();
 });
@@ -24,9 +25,9 @@ server.ext('onPreHandler', function (request, reply) {
 
 test('Testing that content can be added to DB', function (t) {
 server.inject({method: 'POST', url: '/contentUpload'}, function (err, response) {
-  console.log(err, response);
+  console.log(err);
   t.equal(response.statusCode, 200);
-  //mongo.addcontent('test', 'string', function (err, result) {
+
 	//console.log(err, result);
   t.end();
   });

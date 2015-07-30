@@ -18,13 +18,14 @@ function addcontent (screen, content, callback) {
       if(err) { callback(err);}
       else{callback(null, result);}
     });
-	});  
+	});
+//deleteAllContent();
 }
 
 function getContent (screen, callback) {
   MongoClient.connect(url, function (err, db){
-    var content = db.collection('content');
-    content.findOne({_id:screen}, function (err, result) {
+    var contents = db.collection('contents');
+    contents.findOne({_id:screen}, function (err, result) {
       db.close();
       if(err) {callback(err);}
       else {callback(null, result);}
@@ -32,4 +33,15 @@ function getContent (screen, callback) {
   });
 }
 
+/*function deleteAllContent () {
+  MongoClient.connect(url, function (err, db){
+    var contents = db.collection('contents');
+    contents.remove({});
+    console.log('HaistapaskaTimoSoini');
+  });
+}
+*/
+
+
 module.exports= contentRequest;
+//module.exports= deleteAllContent;
