@@ -22,50 +22,62 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/tour',
+    path: '/',
+    config: {
+      auth: false,
+      handler: welcome_handler
+    }
+  },
+
+  {
+    method: 'GET',
+    path: '/tour/{stage?}',
+    config: {
+      auth: false,
       handler: tour_handler
+    }
   },
 
   {
     method: 'GET',
     path: '/star',
-      handler: star_handler
+    handler: star_handler
   },
 
   {
     method: 'GET',
     path: '/legal',
-      handler: legal_handler
+    handler: legal_handler
   },
 
   {
     method: 'GET',
     path: '/hurrah',
-      handler: hurrah_handler
+    handler: hurrah_handler
   },
 
   {
     method: 'GET',
     path: '/progress',
-      handler: progress_handler
+    handler: progress_handler
   },
 
   {
     method: 'GET',
     path: '/content',
-      handler: content_handler
+    handler: content_handler
   },
 
   {
     method: 'GET',
     path: '/calendar',
-      handler: calendar_handler
+    handler: calendar_handler
   },
 
   {
     method: 'GET',
     path: '/welcome',
-      handler: welcome_handler
+    handler: welcome_handler
   },
 
   {
