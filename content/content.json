@@ -1,0 +1,35 @@
+[
+  {
+    "tour" : [
+      {
+        "title": "Welcome to Prolifiko",
+        "text": []
+      },
+      {
+        "title": "My Progress",
+        "screenshot": "public/image/tour-1.png",
+        "text": ["This is where you get an overview of your progress. You select a step to get started.", "Once a step is completed, you click on a star to turn it gold."]
+      },
+      {
+        "title": "Steps",
+        "screenshot": "public/image/tour-2.png",
+        "text": ["The app takes you through 5 steps to kickstart your blog. Each step contains instructions on how to create a post.", "How you move through the steps and how long it takes is up to you – timings given are only a guide.", "Work on paper or computer – it doesn't matter."]
+      },
+      {
+        "title": "Collecting Stars",
+        "screenshot": "public/image/tour-3.png",
+        "text": ["You complete each step by clicking on a star to collect it. By the end you will have all 5 stars. ", "You can't move onto the next step until you've completed the one before."]
+      },
+      {
+        "title": "Continue Posting",
+        "screenshot": "public/image/tour-4.png",
+        "text": ["Once you've kickstarted your blog you can access: ", ["Bonus advice to give future blog posts more variety.", "A super quick refresher course so you don't need to go through the long steps.", "A 'post now' button so you can log your progress and build your blogging habit.", "A calendar so you can view your progress."]]
+      },
+      {
+        "title": "More",
+        "screenshot": "public/image/tour-5.png",
+        "text": ["On every page you can select 'more' so you can:", ["Set reminders", "Learn more about Prolifiko", "Learn about privacy and terms of use", "Get started"]]
+      }
+    ]
+  }
+]
