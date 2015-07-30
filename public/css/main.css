@@ -1,0 +1,42 @@
+*{
+  /*border: 1px dotted black;*/
+}
+
+html {
+  background-color: #FFFFFF;
+  text-align: center;
+}
+
+#content-welcome-tour img {
+  height: 10em;
+  width: 10em;
+  margin: auto;
+}
+
+.welcomeTour {
+  display: flex;
+  justify-content: center;
+}
+
+.dates{
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+}
+
+.oneDay{
+	margin: 0 auto;
+}
+
+.topbox{
+  margin: 0;
+  background-color: #FFF835;
+}
+
+.bottombox{
+  margin: 0;
+}
+
+.selected{
+  color: #FFF835;
+}

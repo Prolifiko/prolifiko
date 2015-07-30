@@ -10,11 +10,11 @@ server.ext('onPreAuth', function (request, reply) {
   reply.continue();
 });
 
-test('testing loading route', function (t) {
-  server.inject({method: 'GET', url: '/loading'}, function (response) {
+test('testing welcome route', function (t) {
+  server.inject({method: 'GET', url: '/welcome'}, function (response) {
     t.equal(response.statusCode, 200);
     var $ = cheerio.load(response.result);
-    t.equal($('h1')[0].children[0].data, 'Kickstart and continue your blogging habit');
+    t.equal($('h1')[0].children[0].data, 'Welcome to Prolifiko');
     server.stop();
     t.end();
   });
