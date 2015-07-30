@@ -16,7 +16,8 @@ server.views({
     path: __dirname + '/../views',
     layoutPath: __dirname + '/../views/layout',
     layout: true,
-    partialsPath: __dirname + '/../views/partial'
+    partialsPath: __dirname + '/../views/partial',
+    helpersPath: __dirname + '/../views/helpers'
 });
 
 server.register(require('bell'), function (err) {

@@ -14,10 +14,6 @@ test('testing welcome tour content route', function (t) {
       t.equal(isInBody(contentBody, data.content[1].text[0]), true);
       t.end();
     });
-
-    function isInBody (x, y) {
-    	return x.indexOf(y) !== -1;
-    }
   });
 });
 
@@ -29,3 +25,15 @@ test('no param gives same as "tour/0"', function (t) {
     });
   });
 });
+
+test('tour/4', function (t) {
+  server.inject({method: 'GET', url: '/tour/4'}, function (response) {
+    t.equal(isInBody(response.result, 'Sign Up'), true);
+    t.end();
+  });
+});
+
+
+function isInBody (x, y) {
+  return x.indexOf(y) !== -1;
+}
