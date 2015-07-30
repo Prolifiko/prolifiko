@@ -64,8 +64,14 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/step1/{stage?}',
+    path: '/stepOne/{stage?}',
     handler: contentHandler('One')
+  },
+
+  {
+    method: 'GET',
+    path: '/stepTwo/{stage?}',
+    handler: contentHandler('Two')
   },
 
   {

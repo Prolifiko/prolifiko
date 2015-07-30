@@ -6,12 +6,13 @@ function contentHandler (step) {
       var button = 'Continue';
       var stage = request.params.stage || 0;
       var content = data.content[stage];
-      var nextStep = '/content/' + (+stage + 1);
+      var next = '/step' + step + '/' + (+stage + 1);
+      var prev = '/step' + step + '/' + (+stage - 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       reply.view('content', {
         text: content.text,
-        nextStep: nextStep,
-        button: button,
+        next: next,
+        prev: prev,
         src: src,
         title: content.title,
       });
