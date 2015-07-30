@@ -21,6 +21,8 @@ function addcontent (screen, content, callback) {
 	});
 }
 
+/// fkjdsfkljaesfkle
+
 function getContent (screen, callback) {
   MongoClient.connect(url, function (err, db){
     var contents = db.collection('contents');
