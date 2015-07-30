@@ -4,6 +4,7 @@ node_js:
 - 0.1
 services:
 - mongodb
+before_script: npm run import-db
 env:
   matrix:
   - MONGOLAB_URI=mongodb://localhost:27017/prolifiko
