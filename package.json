@@ -10,7 +10,9 @@
     "test": "./node_modules/tape/bin/tape test/*.js && npm run coverage && npm run jshint",
     "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "jshint": "jshint --exclude-path .gitignore .",
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "foreman run npm start",
+    "dev-test": "foreman run npm test"
   },
   "repository": {
     "type": "git",
