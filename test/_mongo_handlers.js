@@ -1,6 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var mongo = require('../api/handlers/mongo_handlers');
 var test = require('tape');
+var server = require('../api/server');
 require('dotenv').load();
 
 var url = process.env.MONGOLAB_URI;
@@ -50,5 +51,30 @@ test('Test the user can be deleted', function (t) {
     t.equal(!!err, false);
     t.equal(result.deletedCount, 1);
     t.end();
+  });
+});
+
+server.ext('onPreAuth', function (request, reply) {
+  request.state.sid = {id: 23};
+  reply.continue();
+});
+
+test('getting user 23 should return the info for the user', function (t) {
+  server.inject({method: 'GET', url: '/getMe'}, function (response) {
+    t.equals(response.statusCode, 200);
+    var payload = JSON.parse(response.payload);
+    t.equals(!!payload.steps, true);
+    t.equals(!!payload.timestamps, true);
+    t.end();
+  });
+});
+
+test('users star can be updated', function (t) {
+  server.inject({method: 'POST', url: '/starPush'}, function (response) {
+    t.equals(response.statusCode, 200);
+    mongo.findUser(23, function (err, result) {
+      t.equal(1, result.steps.length);
+      t.end();
+    });
   });
 });

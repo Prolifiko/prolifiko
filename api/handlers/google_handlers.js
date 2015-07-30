@@ -1,4 +1,4 @@
-var mongo = require('./mongo_handlers.js');
+var mongo = require('./mongo_handlers.js'); //
 
 function login (request, reply) {
   var userId = getId(request);

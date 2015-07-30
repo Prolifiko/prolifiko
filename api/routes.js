@@ -8,7 +8,7 @@ var hurrah_handler = require('./handlers/hurrah_handler.js');
 var content_handler = require('./handlers/content_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
-var user = require('./handlers/user_info_handlers');
+var mongo = require('./handlers/mongo_handlers');
 
 
 var routes = [
@@ -82,7 +82,13 @@ var routes = [
   {
     method: 'GET',
     path: '/getMe',
-    handler: user,
+    handler: mongo.getMe,
+  },
+
+  {
+    method: 'POST',
+    path: '/starPush',
+    handler: mongo.starRequest,
   }
 ];
 
