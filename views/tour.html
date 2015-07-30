@@ -6,17 +6,29 @@
     </div>
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--2-col">
-        <img class='goldStar' src='../img/iphone.jpg' />
+        <img src={{src}} />
       </div>
     </div>
     <div class="mdl-card__supporting-text">
-      {{tour_content}}
+
+      {{#each tourContent}}
+        {{#if typeof this='STRING'}}
+          <ul>
+            {{#each this}}
+              <li> {{this}}</li>
+            {{/each}}
+          </ul>
+        {{else}}
+          <p>{{this}}</p>
+        {{/if}}
+      {{/each}}
     </div>
     <!-- view progress button -->
     <div class="mdl-grid">
       <div class="mdl-cell mdl-cell--1-col"></div>
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Continue
+      <form action={{nextStep}}>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+        {{button}}
       </button>
       <div class="mdl-cell mdl-cell--1-col"></div>
     </div>
