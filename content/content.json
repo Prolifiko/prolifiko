@@ -1,35 +1,262 @@
 [
   {
-    "tour" : [
-      {
-        "title": "Welcome to Prolifiko",
-        "text": []
-      },
+    "step": "tour",
+    "content": [
       {
         "title": "My Progress",
-        "screenshot": "public/image/tour-1.png",
+        "screenshot": "public/img/tour-1.png",
         "text": ["This is where you get an overview of your progress. You select a step to get started.", "Once a step is completed, you click on a star to turn it gold."]
       },
       {
         "title": "Steps",
-        "screenshot": "public/image/tour-2.png",
+        "screenshot": "public/img/tour-2.png",
         "text": ["The app takes you through 5 steps to kickstart your blog. Each step contains instructions on how to create a post.", "How you move through the steps and how long it takes is up to you – timings given are only a guide.", "Work on paper or computer – it doesn't matter."]
       },
       {
         "title": "Collecting Stars",
-        "screenshot": "public/image/tour-3.png",
+        "screenshot": "public/img/tour-3.png",
         "text": ["You complete each step by clicking on a star to collect it. By the end you will have all 5 stars. ", "You can't move onto the next step until you've completed the one before."]
       },
       {
         "title": "Continue Posting",
-        "screenshot": "public/image/tour-4.png",
+        "screenshot": "public/img/tour-4.png",
         "text": ["Once you've kickstarted your blog you can access: ", ["Bonus advice to give future blog posts more variety.", "A super quick refresher course so you don't need to go through the long steps.", "A 'post now' button so you can log your progress and build your blogging habit.", "A calendar so you can view your progress."]]
       },
       {
         "title": "More",
-        "screenshot": "public/image/tour-5.png",
+        "screenshot": "public/img/tour-5.png",
         "text": ["On every page you can select 'more' so you can:", ["Set reminders", "Learn more about Prolifiko", "Learn about privacy and terms of use", "Get started"]]
       }
+    ]
+  },
+  {
+    "step": "stepOne",
+    "content": [
+      {
+        "title": "Choose your topic",
+        "screenshot": "public/img/pencil.png",
+        "text": ["By the end of this step you’ll have picked the subject of your blog post. ", "We’ll do this by thinking through why you’re blogging and who you’re blogging for. We’ll brainstorm some ideas and then focus down on one.", "The golden rule when choosing a topic is ‘be useful’. Remember this at all times. ", "Spend around 15 minutes on this step."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Okay let’s get going.", "Your head might be brimming with ideas for posts but hold your horses! Let’s first take a step back. We need to think through why you are blogging.", "Write down in one sentence how you hope writing a blog is going to help you or your business. Be as specific as possible. For example, rather than ‘generate new clients’ say what kind of clients, in what sector?"]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Good, we now need to think about your audience. Write down who you would ideally like to read your blog. What kind of person are they, what do they do? ", "It might help to bring them alive. Give them a name and a brief description of who they are. Try to just pick one person, not lots of different people – it really helps to have a focus."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Now we know who we’re writing for, we need to select topics they’re likely to be interested in – and that means finding topics that are useful to them. ", "A good way to do this is to think about the challenges and problems they currently have – or what might really interest or delight them.", "What’s stopping your reader from getting what they want? What issues do they have ‘front of mind’? What would genuinely interest them or make them happy?", "Aim to write a list of 10 topics. "]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["You’ve just found 10 potential blog posts!", "Next, write down which of these topics you can assist with.", "Are there any you feel particularly qualified to help with? Perhaps you have personal experience of tackling one? Are any appealing to you? Are any really topical?", "Now, select one topic and write it down.", "Remember the golden rule: Will writing about this topic be useful to your reader? Will it inform, delight or interest them?"]
+      },
+      {
+        "title": "You’ve completed step 1 and collected your 1st star!",
+        "screenshot": "",
+        "text": ["In this step you’ve explored why you’re blogging and who you’re blogging for. You’ve investigated which topics are going to be useful to write about and you’ve chosen the best one for your audience. ", "In step 2, we’re going to ask you to brainstorm what you know about your chosen topic.", "Find at least 15 minutes of clear writing time to complete the next step."]
+      }
+    ]
+  },
+  {
+    "step": "stepTwo",
+    "content": [
+      {
+        "title": "Brainstorm your ideas",
+        "screenshot": "public/img/pencil.png",
+        "text": ["By the end of this step you’ll have a list of the key points your post will cover.", "We’ll identify the key ‘take away’ benefit of your post, then we’ll brainstorm some ideas for content and focus down on the best ones.", "Spend around 15 minutes on this step."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Okay let’s get started.", "Go back to the topic you selected in the last step.", "Visualize your ideal reader again. What one thing above all else would you like them to take away from reading your post?", "For example, are they going to be able to do – or know – something new? Might they change their behavior or feel inspired or happier after reading your post?", "Write this underneath your topic."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Now you have the topic you’re going to write about and the main benefit your reader will take away from your post.", "Next we need to think about how you’re going to help get them get there. Start by brainstorming what you know about the topic. What information, advice, experience or insight can you offer?", "Remember the golden rule: whatever you write must be useful to the reader.", "Create a list, mind map, cluster words or just start scribbling – it doesn’t matter as long as you get things down."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Okay, by now you’ve probably got a page or so of scribble. Great!", "Now we need to focus down on the best bits – those pearls of wisdom and insight that are going to help your reader take away something really useful.", "Go through your scribbles and find your best words, sentences or phrases. Pick them out in some way – cluster ideas, list key terms, underline words – whatever works for you.", "Complete this task to collect your 2nd star."]
+      },
+      {
+        "title": "You’ve just completed step 2!",
+        "screenshot": "",
+        "text": ["In this step you’ve identified what your reader will take away from reading this post, and after a quick brainstorm, you’ve focused down on some of your best ideas.", "You now have all of your thoughts in one place. It might be a messy list of scribbles but that’s okay!", "In step 3, we’re going to create some structure for your thoughts. You’ll need to find at least 15 minutes to complete it."]
+      }
+    ]
+  },
+  {
+    "step": "stepThree",
+    "content": [
+      {
+        "title": "Order your ideas",
+        "screenshot": "public/img/pencil.png",
+        "text": ["By the end of this step you’ll have your thoughts ordered into a structure that will help you write your draft.", "First, we’re going to think about how blog posts are constructed and identify what will form the beginning, middle and the end of your post.", "Spend around 15 minutes on this step."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Okay let’s get going.", "Now you’ve identified what your reader will take away from reading the post and found some great ideas to help them get there. Now, we’re going to add structure.", "When you’re writing a blog post you’re telling a story and every story has a beginning, a middle and an end. ", "Return to your brainstormed notes.", "You’re now going to take your ideas and order them on a fresh document."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["You’re now going to take your ideas and order them on a fresh document.", "Write down and explain what the main point of the post is going to be.", "For example, this could be something you believe in or something you want to change or help with. Note down why this topic is a problem, who for and how you intend to resolve it.", "When you’ve ordered your thoughts for the beginning, it’s time to think about the middle part of your post."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["The middle is the longest part of the post and it’ll take more time to structure.", "It’s also the part where you need to explain why the reader should believe you.", "Now, write down how you will prove your point. Give reasons.", "For example, what evidence, personal experience or argument are you going to use to demonstrate that you can help?", "Once you’ve planned the middle, it’s time to move on to the end."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["We all know that every story needs an ending – and your post is no different – so you’ll need a conclusion.", "Now, write down how you will prove your point. Give reasons.", "Return to your ‘take away’ sentence and use this to structure your conclusion.", "What’s the one thing your reader has learnt? Write this down.", "For example, what have you proved – or disproved? What should or shouldn’t a reader do or think?", "Complete this task to collect your 3nd star."]
+      },
+      {
+        "title": "You’ve just completed step 3!",
+        "screenshot": "",
+        "text": ["In this step you explored the importance of your post having a structure – a clear beginning, middle and end.", "The next step involves writing your draft which means you need to find a clear 30 minutes.", "Pick a time where distractions will be at a minimum – lock the door, don’t check email and turn your phone off."]
+      }
+    ]
+  },
+  {
+    "step": "stepFour",
+    "content": [
+      {
+        "title": "Writing the 1st draft",
+        "screenshot": "public/img/pencil.png",
+        "text": ["By the end of this step you’re going to have a draft of your blog post – wow!", "We’ll look at how you should approach this task and what you should (and shouldn’t) be doing as you write.", "Before you start, have you got 30 minutes of writing time without distractions? If not, wait until you do before you get going."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Let’s get started.", "So far, you’ve ordered your thoughts so your post has a rough shape to it.", "For this exercise you’ll need to write the draft from start to finish in one sitting – sorry, no breaks!", "You’ll need to write it quickly – speed is of the essence here – and not to look back over your words.", "You might want to set a timer.", "So, boot up the computer and have your document from step 3 handy – either printed out or on screen."]
+      },
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["Now it’s time to write! Aim to hit around 500-800 words but don’t worry about the word count when you’re writing, that comes later. As you write:", ["Don’t wait: A beautiful first sentence isn’t going to appear – just start writing.", "Don’t edit: Don’t look back – this is a first draft that nobody else is going to read.", "Don’t judge: Silence your inner critic – we need words on the page not perfect prose."], "Aim to write for 30 minutes – good luck!", "Complete this task to collect your 4th star." ]
+      },
+      {
+        "title": "You’ve just completed step 4!",
+        "screenshot": "",
+        "text": ["You’ve completed step 4 and most of the hard work is behind you – well done.", "In this step you wrote the first draft of a post that your readers are going to love.", "However, you wrote it quickly and without looking back so now we’re ready for the final step which is all about how to edit and optimize your words. Step 5 will need 45 minutes of uninterrupted editing time."]
+      }
+    ]
+  },
+  {
+   "step": "stepFive",
+   "content": [
+     {
+       "title": "Optimize your post",
+       "screenshot": "public/img/pencil.png",
+       "text": ["By the end of this final step you’ll have learned how to turn your draft post into a thing of beauty! ", "First, we’ll cover some tips on how to edit your words then on how you can best optimize for online and social media.", "It’s likely that your draft post might look a bit rough and ready – that’s okay, nobody else is going to read it. ", "Now it’s time to start optimizing your post and the first stage is to edit. Spend around 45 minutes on this step."]
+     },
+     {
+       "title": "",
+       "screenshot": "",
+       "text": ["Let’s get the basics right. ", "Read the post and check for grammar. Then correct and rewrite any typos and factual errors. ", "Next, smooth out your text so that one sentence flows into the next. Make sure your argument develops and has a ‘logic’ to it – each point building on the last.", "Shorten any lengthy sentences and make sure your post is written in plain English. Keep it simple. Cut out jargon and forget about flowery language – leave that for the poets!"]
+     },
+     {
+       "title": "",
+       "screenshot": "",
+       "text": ["Good, now break up your text to make it easy to scan. Aim for 2 or 3 sentences per paragraph. ", "Then add headings every few paragraphs  – this makes it far easier to read and ensures the post is more ‘SEO’ friendly. "]
+     },
+     {
+       "title": "",
+       "screenshot": "",
+       "text": ["Okay, it’s time to draw your reader in with an eye-catching title and opening paragraph.", "Make the headline short and snappy.  Nothing too fancy, just describe what your post is about in plain, simple language. ", "Then, work on the opening paragraph or ‘standfirst’. Try to write something that really pulls people in – surprise them, shock them, ask them a question. Make them want to read on. "]
+     },
+     {
+       "title": "",
+       "screenshot": "",
+       "text": ["Nearly there! Now, work through these items so your post packs the maximum punch.", "Add a graphic to make sure your post is eye catching and works on social media.", "If useful, include a bullet list summarizing the key points of your post.", "Add links to other areas of your blog or to the sites you mention.", "Add ‘pull quotes’ so the best phrases and pearls of wisdom stand out."]
+     },
+     {
+       "title": "You’ve completed all 5 steps! Now you’re blogging with purpose",
+       "screenshot": "",
+       "text": ["You’ve just kickstarted your blog and created a targeted post that your readers will love. Now it’s time to continue your blogging habit. "]
+     },
+   ]
+ },
+ {
+   "step": "bonus",
+   "content": [
+     {
+       "title": "Try different styles",
+       "screenshot": "public/img/pencil.png",
+       "text": ["We’re now going to look at the different styles you could use in posts – because it’s important for your blog to have variety.", "From steps 1 and 2 you might have ideas for other posts. If so, type these into a list. This is your blog pipeline.", "Now, keep this handy as you read the following screens. Ask yourself, could you write your blog in a different style?"]
+     },
+     {
+       "title": "Show your skills",
+       "screenshot": "",
+       "text": ["Tell people how to do something practical like learn a new skill. Write something instructional.", "Provide a handy review guide in an area that would interest your readers. Write a review post."]
+     },
+     {
+       "title": "Show your knowledge",
+       "screenshot": "",
+        "text": ["Give your readers new insights and information on a topic – make the post informational.", "Write what you believe is going to happen in your field in say, the next say 6 months. Make a prediction."]
+     },
+     {
+       "title": "Show your opinions",
+       "screenshot": "",
+       "text": ["Write about what you would change in your industry or sector. Spark an argument or debate about something.", "Inspire your reader with your vision of how things should be in your industry or field of interest. Be inspirational."]
+     },
+     {
+       "title": "Show your experiences",
+       "screenshot": "",
+       "text": ["Write about your own experiences in a sector and give tips to people coming into your area. Share your personal journey.", "Write about how your profession or industry has changed and why that should matter to your reader. Write a commentary." ]
+     },
+     {
+       "title": "You’ve completed the bonus!",
+       "screenshot": "",
+       "text": ["We’ve identified your posting pipeline and explored the different styles you can use to give variety to your blog.", "Whenever you create a new post, track your progress in your calendar.", "You can also set reminders so you know when your next post is due. ", "You’re well on the way to building a blogging habit that works for you." ]
+     },
+   ]
+ },
+ {
+    "step": "quickTips",
+    "content": [
+      {
+        "title": "",
+        "screenshot": "",
+        "text": ["You’ve kickstarted your blog – now it’s time to continue. ", "You might not want to go through all the steps in detail but a refresher might be handy.", "Cut to the chase and work these 5 super quick tips as you create your post.", "You can access the full steps at any time from ‘my progress’. "]
+      },
+      {
+        "title": "1. Choose your topic",
+        "screenshot": "",
+        "text": ["Make sure you know who you are writing for – write for an individual.", "Choose a topic that’s at the front of their mind – like a problem they’re facing.", "Think about how you can help them with that challenge.", "Be useful at all times. Will your topic inform, interest or delight the reader?"]
+      },
+      {
+        "title": "2. Brainstorm your ideas",
+        "screenshot": "",
+        "text": ["Set out the one thing your reader is going to ‘take away’ from reading your post. ", "Write down all you know about that chosen topic – these are your nuggets of wisdom.", "Think about the knowledge, insight or personal experience you could offer.", "Narrow down your nuggets of wisdom to the most relevant pieces of advice. "]
+      },
+      {
+        "title": "3. Order your ideas",
+        "screenshot": "",
+        "text": ["Remember that a blog post is a story with a beginning, middle and end.", "At the beginning, set out the main point you are trying to make.", "In the middle, explain why your reader should believe you – give reasons.", "At the end, draw some conclusions – explain what’s been learned. "]
+      },
+      {
+        "title": "4. Writing the first draft",
+        "screenshot": "",
+        "text": ["Make sure you have at least 30 minutes of clear writing time – turn off the phone.", "Write quickly – don’t edit, this is a first draft that nobody but you will read.", "Don’t wait – a beautiful first sentence isn’t going to appear. Just start writing.", "Don’t judge – silence your inner critic. All you need are words on a page."]
+      },
+      {
+        "title": "5. Optimize your post",
+        "screenshot": "",
+        "text": ["Check for the basic mistakes – grammar, typos and spelling. Aim for 500-800 words.", "Use plain English and short sentences. Cut out any jargon.", "Break up your text into paragraphs to make it easy to scan. Add headings.", "Add a snappy title and draw readers in with a strong first paragraph.", "Don’t forget: add an image, add pull quotes and a ‘key point’ bullet list."]
+      },
     ]
   }
 ]
