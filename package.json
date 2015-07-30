@@ -10,7 +10,11 @@
     "test": "./node_modules/tape/bin/tape test/*.js && npm run coverage && npm run jshint",
     "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "jshint": "jshint --exclude-path .gitignore .",
-    "start": "node app.js"
+    "start": "node app.js",
+    "nodemon": "nodemon app.js",
+    "watch": "nodemon --watch views --ext html --exec 'npm start'",
+    "import-db": "mongo prolifiko --eval 'db.content.drop()' && mongoimport --db prolifiko --collection content --type json --file content/content.json --jsonArray",
+    "update-content-trav": "travis encrypt-file content/content.json content/content.json.enc"
   },
   "repository": {
     "type": "git",
@@ -25,10 +29,11 @@
   "dependencies": {
     "bell": "^5.0.0",
     "dotenv": "^1.2.0",
+    "handlebars": "^3.0.3",
     "hapi": "^8.8.0",
     "hapi-auth-cookie": "^3.0.1",
     "mongodb": "^2.0.39",
-    "riot": "^2.2.2"
+    "nodemon": "^1.4.0"
   },
   "devDependencies": {
     "cheerio": "^0.19.0",

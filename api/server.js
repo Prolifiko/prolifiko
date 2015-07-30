@@ -9,6 +9,17 @@ server.connection({
   port: Number(process.env.PORT) || 8000
 });
 
+server.views({
+    engines: {
+        html: require('handlebars')
+    },
+    path: __dirname + '/../views',
+    layoutPath: __dirname + '/../views/layout',
+    layout: true,
+    partialsPath: __dirname + '/../views/partial',
+    helpersPath: __dirname + '/../views/helpers'
+});
+
 server.register(require('bell'), function (err) {
 
     server.auth.strategy('google', 'bell', {
@@ -32,7 +43,7 @@ server.register(Cookie, function (err) {
     });
 });
 
-//server.auth.default('session');
+server.auth.default('session');
 
 
 
