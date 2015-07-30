@@ -7,7 +7,7 @@ services:
 before_install:
   - openssl aes-256-cbc -K $encrypted_b86c63c89ffe_key -iv $encrypted_b86c63c89ffe_iv -in content/content.json.enc -out content/content.json -d
 before_script:
-  - npm run import_db
+  - npm run import-db
 env:
   matrix:
   - MONGOLAB_URI=mongodb://localhost:27017/prolifiko
