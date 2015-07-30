@@ -186,7 +186,7 @@
        "title": "You’ve completed all 5 steps! Now you’re blogging with purpose",
        "screenshot": "",
        "text": ["You’ve just kickstarted your blog and created a targeted post that your readers will love. Now it’s time to continue your blogging habit. "]
-     },
+     }
    ]
  },
  {
@@ -221,7 +221,7 @@
        "title": "You’ve completed the bonus!",
        "screenshot": "",
        "text": ["We’ve identified your posting pipeline and explored the different styles you can use to give variety to your blog.", "Whenever you create a new post, track your progress in your calendar.", "You can also set reminders so you know when your next post is due. ", "You’re well on the way to building a blogging habit that works for you." ]
-     },
+     }
    ]
  },
  {
@@ -256,7 +256,7 @@
         "title": "5. Optimize your post",
         "screenshot": "",
         "text": ["Check for the basic mistakes – grammar, typos and spelling. Aim for 500-800 words.", "Use plain English and short sentences. Cut out any jargon.", "Break up your text into paragraphs to make it easy to scan. Add headings.", "Add a snappy title and draw readers in with a strong first paragraph.", "Don’t forget: add an image, add pull quotes and a ‘key point’ bullet list."]
-      },
+      }
     ]
   }
 ]
