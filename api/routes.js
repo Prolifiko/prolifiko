@@ -3,6 +3,8 @@ var loading_handler = require('./handlers/loading_handler');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var mongo = require('./handlers/mongo_handlers');
+var contentRequest = require('./handlers/content_mongo_handlers');
+
 
 
 var routes = [
@@ -47,7 +49,14 @@ var routes = [
     method: 'POST',
     path: '/starPush',
     handler: mongo.starRequest,
+  },
+
+  {
+    method: 'POST',
+    path:'/contentUpload',
+    handler: contentRequest,
   }
+
 ];
 
 module.exports = routes;

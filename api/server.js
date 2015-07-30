@@ -2,7 +2,7 @@ var Hapi = require('hapi');
 var Cookie= require('hapi-auth-cookie');
 var server = new Hapi.Server();
 var routes = require('./routes.js');
-require('dotenv').load();
+// require('dotenv').load();
 
 server.connection({
   host: '0.0.0.0',
@@ -32,7 +32,7 @@ server.register(Cookie, function (err) {
     });
 });
 
-//server.auth.default('session');
+server.auth.default('session');
 
 
 
