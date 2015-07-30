@@ -19,7 +19,6 @@ function addcontent (screen, content, callback) {
       else{callback(null, result);}
     });
 	});
-//deleteAllContent();
 }
 
 function getContent (screen, callback) {
@@ -33,15 +32,7 @@ function getContent (screen, callback) {
   });
 }
 
-/*function deleteAllContent () {
-  MongoClient.connect(url, function (err, db){
-    var contents = db.collection('contents');
-    contents.remove({});
-    console.log('HaistapaskaTimoSoini');
-  });
-}
-*/
+
 
 
 module.exports= contentRequest;
-//module.exports= deleteAllContent;
