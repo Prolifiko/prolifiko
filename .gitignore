@@ -29,5 +29,4 @@ data
 */*/.DS_Store
 
 #content
-content
-content/*
+content/content.json
