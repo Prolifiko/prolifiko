@@ -2,8 +2,23 @@ var mongo = require('./mongo_content');
 
 function tour_handler (request, reply){
   mongo.findContent('tour', function(err, data){
-    stage = request.params.stage || 0;
-    reply.view('tour', {tour_content: data.content[stage].text});
+    var button = 'Continue';
+    var stage = request.params.stage || 0;
+    var content = data.content[stage];
+    var nextStep = '/tour/' + (+stage + 1);
+    /* istanbul ignore next */
+    var src = content.screenshot ? '/' + content.screenshot : false;
+    if (+stage + 1 === data.content.length) {
+      button = 'Sign Up';
+      nextStep = '/progress';
+    }
+    reply.view('tour', {
+      text: content.text,
+      nextStep: nextStep,
+      button: button,
+      src: src,
+      title: content.title,
+    });
   });
 }
 
