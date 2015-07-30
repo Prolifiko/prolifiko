@@ -4,7 +4,7 @@ var star_handler = require('./handlers/star_handler.js');
 var calendar_handler = require('./handlers/calendar_handler.js');
 var legal_handler = require('./handlers/legal_handler.js');
 var hurrah_handler = require('./handlers/hurrah_handler.js');
-var content_handler = require('./handlers/content_handler.js');
+var contentHandler = require('./handlers/content_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var mongo = require('./handlers/mongo_handlers');
@@ -64,8 +64,14 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/content',
-    handler: content_handler
+    path: '/stepOne/{stage?}',
+    handler: contentHandler('One')
+  },
+
+  {
+    method: 'GET',
+    path: '/stepTwo/{stage?}',
+    handler: contentHandler('Two')
   },
 
   {
