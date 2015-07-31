@@ -7,20 +7,13 @@ var fs = require('fs');
 test('testing calendar route', function (t) {
   server.inject({method: 'GET', url: '/calendar'}, function (response) {
     t.equal(response.statusCode, 200);
-    
-    var contentBody= response.result;
-    var page = fs.readFileSync(__dirname + '/../views/calendar.html', 'utf-8');
-    
-    function isInBody (x, y ) {
-    	if(x.indexOf(y) !==-1) {
-			 return true;
-    	}else{
-    	 return false;
-    	}
-    }
-
-    t.equal(isInBody(contentBody,page), true);
-    server.stop();
+    t.equal(isInBody(response.body, ['M', 'T', 'W', 'Th', 'F', 'Sa', 'Su']), true);
     t.end();
   });
 });
+
+
+function isInBody (x, y) {
+  if (typeof y === 'object') { return y.every(function(e){ return y.indexOf(e) !== -1; }); }
+  return y.indexOf(x) !== -1;
+}
