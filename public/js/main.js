@@ -15,7 +15,7 @@ var getMe = (function(){
 
   function starPush (step) {
     if (step && userStatus.steps[step]) { return; }
-    if (step) { userStatus.steps.push(step); }
+    if (typeof step === 'number') { userStatus.steps.push(step); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
     isYellow();
@@ -36,6 +36,7 @@ var getMe = (function(){
   }
 
   function totalRender () {
+    console.log('jdkfjd;');
     document.getElementById('streak').innerHTML = userStatus.timestamps.length;
   }
 
