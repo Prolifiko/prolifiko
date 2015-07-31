@@ -1,30 +1,25 @@
-<div class="mdl-grid">
+<div class="mdl-grid welcome">
+  <div class="mdl-cell mdl-cell--12-col logo">
+    <img src="/public/img/blackProlifiko.png" alt="logo prolifiko"/>
+  </div>
 
-    <div class="mdl-card card-square mdl-cell mdl-cell--12-col auto">
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1>Welcome to Prolifiko</h1>
+  </div>
 
-      <div class="mdl-card__title mdl-card--expand">
-      </div>
+  <div class="mdl-cell mdl-cell--12-col">
+    <form action="/tour">
+      <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent action-button">
+        Start Tour
+      </button>
+    </form>
+  </div>
 
-      <div class="mdl-card__supporting-text mdl-typography--text-center">
-        <h1 class="mdl-card__title-text ">Welcome to Prolifiko</h1>
-      </div>
-
-
-          <form action="/tour">
-            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent auto">
-              Start Tour
-            </button>
-          </form>
-
-
-        <form action="/login">
-          <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect auto">
-          Login
-          </button>
-        </form>
-
-
-    </div>
-
-
+  <div class="mdl-cell mdl-cell--12-col">
+    <form action="/login">
+      <button type="submit" class="mdl-button mdl-js-button mdl-js-ripple-effect action-button">
+        Login
+      </button>
+    </form>
+  </div>
 </div>
