@@ -9,6 +9,7 @@ function contentHandler (step) {
       var star = false;
       var hoorah = false;
       if (+stage === data.content.length - 2) { star = true; }
+      /*istanbul ignore next*/
       if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var prev = '/step' + step + '/' + (+stage - 1);
