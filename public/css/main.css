@@ -1,6 +1,7 @@
 /**{
   border: 1px dotted black;
 }*/
+
 .welcome{
   margin: 0 auto;
   text-align: center;
@@ -9,6 +10,12 @@
 .auto{
   margin: 0 auto;
   text-align: center;
+}
+
+.inline{
+  display: inline-block;
+  margin: 0 auto;
+  width: 12%;
 }
 
 .action-button {
@@ -20,25 +27,17 @@
   height: 100px;
 }
 
-.dates{
-	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
-}
-
-.oneDay{
-	margin: 0 auto;
-}
-
 .topbox{
   margin: 0;
   background-color: #FFF835;
 }
 
 .bottombox{
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.selected{
-  color: #FFF835;
+.success{
+  background-color: #FFF835;
+  border-radius: 50%;
 }
