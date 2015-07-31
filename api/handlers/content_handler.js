@@ -12,13 +12,12 @@ function contentHandler (step) {
       /*istanbul ignore next*/
       if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
-      var prev = '/step' + step + '/' + (+stage - 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       reply.view('content', {
         text: content.text,
         next: next,
-        prev: prev,
         src: src,
+        button:button,
         title: content.title,
         star: star,
         hoorah: hoorah
