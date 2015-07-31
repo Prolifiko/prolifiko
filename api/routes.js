@@ -98,14 +98,14 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/bonus/{stage?}',
-    handler: content_handler('bonus')
+    path: '/stepBonus/{stage?}',
+    handler: content_handler('Bonus')
   },
 
   {
     method: 'GET',
-    path: '/tips/{stage?}',
-    handler: content_handler('quickTips')
+    path: '/stepTips/{stage?}',
+    handler: content_handler('Tips')
   },
 
   {
