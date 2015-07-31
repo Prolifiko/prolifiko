@@ -14,7 +14,7 @@ function contentHandler (step) {
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       if (+stage +1 === data.content.length){
-        button= "My progress";
+        button= "My Progress";
         next = "/progress";
       }
       reply.view('content', {
