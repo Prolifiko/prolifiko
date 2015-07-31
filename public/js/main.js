@@ -13,19 +13,12 @@ var getMe = (function(){
     };
   }
 
-  var getMe = standardRequest(function (req) {
-    localStorage.setItem('prolifiko-me', req.responseText);
-  }, '/getMe', 'get');
-
-  getMe();
-
-  var userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
-
-  var starPush = function (stage) {
+   function starPush (stage) {
     if (stage && userStatus.steps[stage]) { return; }
     if (stage) { userStatus.steps.push(true); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
+    isYellow();
     standardRequest(function (req) {}, '/starPush', 'POST')();
   };
 
@@ -36,6 +29,26 @@ var getMe = (function(){
       if (day.className.indexOf('success') === -1) { day.className += ' success'; }
     });
   }
+
+  function isYellow () {
+    var star = document.getElementsByClassName('star')[0];
+    var stage = star.id.split('star')[1];
+    if (userStatus.steps[stage]) {
+      star.className += ' success';
+      star.src = '/public/img/spaceLogo.png';
+    }
+  }
+
+  var userStatus;
+
+  var getMe = standardRequest(function (req) {
+    localStorage.setItem('prolifiko-me', req.responseText);
+  }, '/getMe', 'get');
+
+  getMe();
+  userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
+  isYellow();
+
 
   if (window.location.href.indexOf('alendar') > -1){ starYellower(); }
 
