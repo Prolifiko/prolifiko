@@ -25,6 +25,13 @@ test('penultimate page of step1 gives a star', function (t) {
   });
 });
 
+test('ultimate page of step1 button to My progress (instead of continue)', function (t) {
+  server.inject({method: 'GET', url: '/step1/5'}, function (response) {
+    t.equal(isInBody(response.result, 'My Progress'), true);
+    t.end();
+  });
+});
+
 function isInBody (x, y) {
   return x.indexOf(y) !== -1;
 }

@@ -99,13 +99,13 @@ var routes = [
   {
     method: 'GET',
     path: '/bonus/{stage?}',
-    handler: content_handler('bonus')
+    handler: content_handler('Bonus')
   },
 
   {
     method: 'GET',
     path: '/tips/{stage?}',
-    handler: content_handler('quickTips')
+    handler: content_handler('Tips')
   },
 
   {
