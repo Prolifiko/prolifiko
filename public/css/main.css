@@ -1,7 +1,14 @@
 *{
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
 }
 
+.content {
+  padding: 10px;
+}
+
+.content img{
+  margin: 0 auto;
+}
 .welcome{
   margin: 0 auto;
   text-align: center;
