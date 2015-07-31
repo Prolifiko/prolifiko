@@ -1,6 +1,5 @@
 var getMe = (function(){
   'use strict';
-
   function standardRequest (callback, URL, method) {
     return function () {
       var xhr = new XMLHttpRequest();
@@ -20,13 +19,24 @@ var getMe = (function(){
 
   getMe();
 
-  var starPush = function(){
-    var userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
+  var userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
+
+  var starPush = function () {
     userStatus.steps.push(true);
-    console.log(userStatus);
+    userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
-    standardRequest(function (req) {}, '/starPush/' + userStatus._id, 'POST')();
+    standardRequest(function (req) {}, '/starPush', 'POST')();
   };
+
+  function starYellower () {
+    userStatus.timestamps.forEach( function (time) {
+      var dayStart = new Date((new Date(time).toDateString())).getTime();
+      var day = document.getElementById(dayStart + '');
+      if (day.className.indexOf('success') === -1) { day.className += ' success'; }
+    });
+  }
+
+  if (window.location.href.indexOf('alendar') > -1){ starYellower(); }
 
   return {
     getMe: getMe,

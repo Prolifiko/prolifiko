@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.auto{
+  margin: 0 auto;
+  text-align: center;
+}
+
 .action-button {
   width: 100%;
   max-width: 300px;
@@ -11,6 +16,20 @@
 .logo img{
   height: 100px;
 }
+
+/*.center{
+  margin: 0 auto;
+}
+
+.card-square.mdl-card {
+  width: 325px;
+  height: 450px;
+}
+.card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('/public/img/blackProlifiko.png') bottom right 15% no-repeat ;
+}*/
 
 .dates{
 	display: flex;
