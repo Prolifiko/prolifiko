@@ -9,7 +9,7 @@ test('testing welcome tour content route', function (t) {
   });
 });
 
-test('no param gives same as "stepONe/0"', function (t) {
+test('no param gives same as "stepOne/0"', function (t) {
   server.inject({method: 'GET', url: '/stepOne'}, function (response) {
     server.inject({method: 'GET', url:'/stepOne/0'}, function (secondResponse){
       t.deepEqual(response.result, secondResponse.result);
