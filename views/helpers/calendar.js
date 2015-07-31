@@ -8,7 +8,7 @@ module.exports = function(){
 
 function generateVertical (day) {
   var days = ['Su', 'M', 'T', 'W', 'Th', 'F', 'Sa'];
-  var result = '<div class="mdl-cell oneDay mdl-cell--1-col">' + days[day.getDay()];
+  var result = '<div class="inline">' + days[day.getDay()];
   var start = day.getTime();
   var pasts = [-1, 0, 1, 2, 3, 4, 5].map(function (week) {
     return start + (week * 7 * 24 * 60 * 60 * 1000);
@@ -16,7 +16,7 @@ function generateVertical (day) {
   result += pasts.map(function (time) {
     var day = new Date(time);
     var dayId = new Date(day.toDateString()).getTime();
-    return '<div class="mdl-cell mdl-cell--1-col valign-wrapper" id="'+dayId+'">'+day.getDate()+'</div>';
+    return '<div class="auto" id="'+dayId+'">'+day.getDate()+'</div>';
   }).join('');
   return result + '</div>';
 }
