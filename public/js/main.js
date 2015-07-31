@@ -44,7 +44,7 @@ var getMe = (function(){
     var star = document.getElementsByClassName('star')[0];
     var step = star.id.split('star')[1];
     if (userStatus.steps[step - 1]) {
-      star.className += ' success';
+      star.className += ' success2';
       star.src = '/public/img/spaceLogo.png';
     }
   }
