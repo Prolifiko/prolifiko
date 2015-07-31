@@ -18,7 +18,6 @@ function contentHandler (step) {
         text: content.text,
         next: next,
         src: src,
-        button:button,
         title: content.title,
         star: star,
         step: step,
