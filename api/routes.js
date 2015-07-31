@@ -21,6 +21,7 @@ var routes = [
       },
       auth: false,
     }
+
   },
 
   {
