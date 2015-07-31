@@ -39,6 +39,14 @@ var getMe = (function(){
     }
   }
 
+  function stepActivate () {
+    var buttons = document.getElementsByTagName('button');
+    userStatus.steps.forEach( function (step, i) {
+      buttons[i + 1].disabled = false;
+      buttons[i].className += ' mdl-button--accent';
+    });
+  }
+
   var userStatus;
 
   var getMe = standardRequest(function (req) {
@@ -47,10 +55,10 @@ var getMe = (function(){
 
   getMe();
   userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
-  isYellow();
-
+  try { isYellow(); } catch (e) {}
 
   if (window.location.href.indexOf('alendar') > -1){ starYellower(); }
+  if (window.location.href.indexOf('progress') > -1){ stepActivate(); }
 
   return {
     getMe: getMe,
