@@ -18,6 +18,7 @@ function tour_handler (request, reply){
       button: button,
       src: src,
       title: content.title,
+      title_header: data.titleHeader
     });
   });
 }

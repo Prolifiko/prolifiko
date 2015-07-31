@@ -1,5 +1,5 @@
 function progress_handler (request, reply) {
-  reply.view('progress', null, {layout: 'progress'});
+  reply.view('progress', {title_header: 'Progress'}, {layout: 'progress'});
 }
 
 module.exports = progress_handler;

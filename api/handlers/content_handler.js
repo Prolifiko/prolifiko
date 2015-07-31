@@ -25,7 +25,8 @@ function contentHandler (step) {
         title: content.title,
         star: star,
         step: step,
-        hoorah: hoorah
+        hoorah: hoorah,
+        title_header: data.titleHeader
       });
     });
   };
