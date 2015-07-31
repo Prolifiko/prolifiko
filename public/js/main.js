@@ -14,8 +14,9 @@ var getMe = (function(){
   }
 
   function starPush (step) {
-    if (step && userStatus.steps[step]) { return; }
-    if (step) { userStatus.steps.push(step); }
+    console.log(step, userStatus);
+    if (step && userStatus.steps[step - 1]) { return; }
+    if (typeof step === 'number') { userStatus.steps.push(step); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
     isYellow();
@@ -42,8 +43,8 @@ var getMe = (function(){
   function isYellow () {
     var star = document.getElementsByClassName('star')[0];
     var step = star.id.split('star')[1];
-    if (userStatus.steps[step]) {
-      star.className += ' success';
+    if (userStatus.steps[step - 1]) {
+      star.className += ' success2';
       star.src = '/public/img/spaceLogo.png';
     }
   }
