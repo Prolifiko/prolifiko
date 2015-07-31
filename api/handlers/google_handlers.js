@@ -6,9 +6,9 @@ function login (request, reply) {
   mongo.findUser(userId, function (err, result) {
     if (!result) {
       mongo.createUser(userId, function (err, result) {
+        reply.redirect('/progress');
       });
-    }
-    reply.redirect('/progress');
+    }else { reply.redirect('/progress');}
   });
 }
 
