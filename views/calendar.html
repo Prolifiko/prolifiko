@@ -1,15 +1,13 @@
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col mdl-shadow--2dp ">
-		<h3 class="topbox"> Total </h3>
-		<h1 class="topbox" id="streak"></h1>
+<!-- <div class="mdl-cell mdl-cell--12-col mdl-shadow--2dp auto"> -->
+	<h3 class="topbox auto"> Total </h3>
+	<h1 class="topbox auto" id="streak"></h1>
+<!-- </div> -->
+<!-- <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--2dp"> -->
+	<div class="mdl-grid auto">
+		<h3 class="bottombox"> {{monthChooser}} </h3>
+	</div>
+  <div class="mdl-grid dates mdl-cell--4-col auto">
+    {{{calendar}}}
   </div>
-  <div class="mdl-cell mdl-cell--6-col mdl-card mdl-shadow--2dp">
-		<div class="mdl-grid">
-			<h3 class="bottombox"> {{monthChooser}} </h3>
-		</div>
-      <div class="mdl-grid dates mdl-cell--6-col">
-        {{{calendar}}}
-      </div>
-    </div>
-</div>
+<!-- </div> -->
 <script src="/public/js/main.js" />

@@ -1,7 +1,6 @@
-
-/**{
-  border: 1px dotted black;
-}*/
+*{
+  /*border: 1px dotted black;*/
+}
 
 .welcome{
   margin: 0 auto;
@@ -29,7 +28,7 @@
 }
 
 .oneDay{
-	margin: 0 auto;
+	width: 100%;
 }
 
 .topbox{
@@ -38,7 +37,7 @@
 }
 
 .bottombox{
-  margin: 0;
+  margin: 0 auto;
 }
 
 .selected{
