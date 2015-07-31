@@ -13,10 +13,13 @@ var routes = [
   {
     method: 'GET',
     path: '/public/{param*}',
-    handler: {
-      directory: {
-        path: 'public'
-      }
+    config: {
+      handler: {
+        directory: {
+          path: 'public'
+        }
+      },
+      auth: false,
     }
   },
 
@@ -103,7 +106,7 @@ var routes = [
 
   {
     method: 'POST',
-    path: '/starPush',
+    path: '/starPush/{id}',
     handler: mongo.starRequest,
   }
 
