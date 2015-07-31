@@ -6,6 +6,10 @@ function contentHandler (step) {
       var button = 'Continue';
       var stage = request.params.stage || 0;
       var content = data.content[stage];
+      var star = false;
+      var hoorah = false;
+      if (+stage === data.content.length - 2) { star = true; }
+      if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var prev = '/step' + step + '/' + (+stage - 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
@@ -15,6 +19,8 @@ function contentHandler (step) {
         prev: prev,
         src: src,
         title: content.title,
+        star: star,
+        hoorah: hoorah
       });
     });
   };
