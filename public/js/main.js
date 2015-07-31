@@ -13,20 +13,14 @@ var getMe = (function(){
     };
   }
 
-  var getMe = standardRequest(function (req) {
-    localStorage.setItem('prolifiko-me', req.responseText);
-  }, '/getMe', 'get');
-
-  getMe();
-
-  var userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
-
-  var starPush = function () {
-    userStatus.steps.push(true);
+  function starPush (step) {
+    if (step && userStatus.steps[step]) { return; }
+    if (step) { userStatus.steps.push(step); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
+    isYellow();
     standardRequest(function (req) {}, '/starPush', 'POST')();
-  };
+  }
 
   function starYellower () {
     userStatus.timestamps.forEach( function (time) {
@@ -35,6 +29,26 @@ var getMe = (function(){
       if (day.className.indexOf('success') === -1) { day.className += ' success'; }
     });
   }
+
+  function isYellow () {
+    var star = document.getElementsByClassName('star')[0];
+    var step = star.id.split('star')[1];
+    if (userStatus.steps[step]) {
+      star.className += ' success';
+      star.src = '/public/img/spaceLogo.png';
+    }
+  }
+
+  var userStatus;
+
+  var getMe = standardRequest(function (req) {
+    localStorage.setItem('prolifiko-me', req.responseText);
+  }, '/getMe', 'get');
+
+  getMe();
+  userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
+  isYellow();
+
 
   if (window.location.href.indexOf('alendar') > -1){ starYellower(); }
 

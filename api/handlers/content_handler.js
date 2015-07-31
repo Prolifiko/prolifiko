@@ -14,12 +14,14 @@ function contentHandler (step) {
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       reply.view('content', {
+        button: button,
         text: content.text,
         next: next,
         src: src,
         button:button,
         title: content.title,
         star: star,
+        step: step,
         hoorah: hoorah
       });
     });
