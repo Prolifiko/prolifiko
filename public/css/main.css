@@ -40,3 +40,8 @@
 .success{
   background-color: #FFF835;
 }
+
+.screen {
+  max-width: 80vw;
+  max-height: 8vh;
+}
