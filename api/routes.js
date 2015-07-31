@@ -68,32 +68,32 @@ var routes = [
 
   {
     method: 'GET',
-    path: '/stepOne/{stage?}',
-    handler: content_handler('One')
+    path: '/step1/{stage?}',
+    handler: content_handler('1')
   },
 
   {
     method: 'GET',
-    path: '/stepTwo/{stage?}',
-    handler: content_handler('Two')
+    path: '/step2/{stage?}',
+    handler: content_handler('2')
   },
 
   {
     method: 'GET',
-    path: '/stepThree/{stage?}',
-    handler: content_handler('Three')
+    path: '/step3/{stage?}',
+    handler: content_handler('3')
   },
 
   {
     method: 'GET',
-    path: '/stepFour/{stage?}',
-    handler: content_handler('Four')
-  }, 
+    path: '/step4/{stage?}',
+    handler: content_handler('4')
+  },
 
   {
     method: 'GET',
-    path: '/stepFive/{stage?}',
-    handler: content_handler('Five')
+    path: '/step5/{stage?}',
+    handler: content_handler('5')
   },
 
   {
@@ -106,7 +106,7 @@ var routes = [
     method: 'GET',
     path: '/tips/{stage?}',
     handler: content_handler('quickTips')
-  },    
+  },
 
   {
     method: 'GET',

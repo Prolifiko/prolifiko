@@ -22,7 +22,7 @@ function contentHandler (step) {
         src: src,
         title: content.title,
         star: star,
-        stage: stage,
+        step: step,
         hoorah: hoorah
       });
     });
