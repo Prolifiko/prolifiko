@@ -76,6 +76,24 @@ var routes = [
 
   {
     method: 'GET',
+    path: '/stepThree/{stage?}',
+    handler: contentHandler('Three')
+  },
+
+  {
+    method: 'GET',
+    path: '/stepFour/{stage?}',
+    handler: contentHandler('Four')
+  }, 
+
+  {
+    method: 'GET',
+    path: '/stepFive/{stage?}',
+    handler: contentHandler('Five')
+  }, 
+
+  {
+    method: 'GET',
     path: '/calendar',
     handler: calendar_handler
   },
