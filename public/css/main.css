@@ -8,14 +8,23 @@
   margin: auto;
 }*/
 
+.auto{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mdl-card__title-text{
+  margin: 0 auto;
+}
+
 .card-square.mdl-card {
-  width: 320px;
-  height: 520px;
+  width: 325px;
+  height: 450px;
 }
 .card-square > .mdl-card__title {
   color: #fff;
   background:
-    url('../img/blackProlifiko.png') bottom right 15% no-repeat ;
+    url('/public/img/blackProlifiko.png') bottom right 15% no-repeat ;
 }
 
 .welcomeTour {

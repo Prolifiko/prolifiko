@@ -13,11 +13,15 @@ var routes = [
   {
     method: 'GET',
     path: '/public/{param*}',
-    handler: {
-      directory: {
-        path: 'public'
-      }
+    config:{
+      handler: {
+        directory: {
+          path: 'public'
+        }
+      },
+      auth:false
     }
+
   },
 
   {
