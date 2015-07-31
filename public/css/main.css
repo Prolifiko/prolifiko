@@ -49,6 +49,11 @@
   text-align: center;
 }
 
+.screen {
+  max-height: 15vh;
+  padding: 2vh;
+}
+
 .success{
   background-color: #FFF835;
   /*border-radius: 50%;*/
