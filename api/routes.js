@@ -4,7 +4,7 @@ var star_handler = require('./handlers/star_handler.js');
 var calendar_handler = require('./handlers/calendar_handler.js');
 var legal_handler = require('./handlers/legal_handler.js');
 var hurrah_handler = require('./handlers/hurrah_handler.js');
-var contentHandler = require('./handlers/content_handler.js');
+var content_handler = require('./handlers/content_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var mongo = require('./handlers/mongo_handlers');
@@ -65,32 +65,44 @@ var routes = [
   {
     method: 'GET',
     path: '/stepOne/{stage?}',
-    handler: contentHandler('One')
+    handler: content_handler('One')
   },
 
   {
     method: 'GET',
     path: '/stepTwo/{stage?}',
-    handler: contentHandler('Two')
+    handler: content_handler('Two')
   },
 
   {
     method: 'GET',
     path: '/stepThree/{stage?}',
-    handler: contentHandler('Three')
+    handler: content_handler('Three')
   },
 
   {
     method: 'GET',
     path: '/stepFour/{stage?}',
-    handler: contentHandler('Four')
+    handler: content_handler('Four')
   }, 
 
   {
     method: 'GET',
     path: '/stepFive/{stage?}',
-    handler: contentHandler('Five')
-  }, 
+    handler: content_handler('Five')
+  },
+
+  {
+    method: 'GET',
+    path: '/bonus/{stage?}',
+    handler: content_handler('bonus')
+  },
+
+  {
+    method: 'GET',
+    path: '/tips/{stage?}',
+    handler: content_handler('quickTips')
+  },    
 
   {
     method: 'GET',
