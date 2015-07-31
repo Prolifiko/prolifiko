@@ -1,14 +1,7 @@
-*{
-  /*border: 1px dotted black;*/
-}
+/**{
+  border: 1px dotted black;
+}*/
 
-.content {
-  padding: 10px;
-}
-
-.content img{
-  margin: 0 auto;
-}
 .welcome{
   margin: 0 auto;
   text-align: center;
@@ -17,11 +10,6 @@
 .auto{
   margin: 0 auto;
   text-align: center;
-}
-
-.stars{
-  height: 8vh;
-
 }
 
 .inline{
@@ -49,16 +37,6 @@
   text-align: center;
 }
 
-.screen {
-  max-height: 15vh;
-  padding: 2vh;
-}
-
 .success{
   background-color: #FFF835;
-  /*border-radius: 50%;*/
-}
-
-.grey{
-  color: grey;
 }
