@@ -1,14 +1,11 @@
-.mdl-grid{
+.welcome{
   margin: 0 auto;
   text-align: center;
 }
 
-button {
+.action-button {
   width: 100%;
-}
-
-.mdl-layout{
-  height: 100vh;
+  max-width: 300px;
 }
 
 .logo img{
