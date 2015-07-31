@@ -8,11 +8,18 @@ function contentHandler (step) {
       var content = data.content[stage];
       var star = false;
       var hoorah = false;
+      var type = 'screen';
       if (+stage === data.content.length - 2) { star = true; }
       /*istanbul ignore next*/
       if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
+      if (!src){
+        if(hoorah){
+          src = "/public/img/" + step + "star.png"
+          type = 'stars';
+        }
+      }
       if (+stage +1 === data.content.length){
         button= "My Progress";
         next = "/progress";
@@ -26,6 +33,7 @@ function contentHandler (step) {
         star: star,
         step: step,
         hoorah: hoorah,
+        type:  type,
         title_header: data.titleHeader
       });
     });
