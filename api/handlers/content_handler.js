@@ -16,7 +16,7 @@ function contentHandler (step) {
       var src = content.screenshot ? '/' + content.screenshot : false;
       if (!src){
         if(hoorah){
-          src = "/public/img/" + step + "star.png"
+          src = "/public/img/" + step + "star.png";
           type = 'stars';
         }
       }
