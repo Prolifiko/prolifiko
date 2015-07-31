@@ -2,19 +2,13 @@
   border: 1px dotted black;
 }
 
-/*#content-welcome-tour img {
-  height: 7em;
-  width: 7em;
-  margin: auto;
-}*/
+h1{
+  text-align: center;
+}
 
 .auto{
   margin: 0 auto;
   width: 100%;
-}
-
-.mdl-card__title-text{
-  margin: 0 auto;
 }
 
 .card-square.mdl-card {
@@ -25,11 +19,6 @@
   color: #fff;
   background:
     url('/public/img/blackProlifiko.png') bottom right 15% no-repeat ;
-}
-
-.welcomeTour {
-  display: flex;
-  justify-content: center;
 }
 
 .dates{
