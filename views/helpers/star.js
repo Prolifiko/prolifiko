@@ -1,6 +1,7 @@
 module.exports = function (context) {
   if (context.data.root.star){
-    return '<div class="mdl-cell mdl-cell--2-col">' +
+    var stage = context.data.root.stage;
+    return '<div class="mdl-cell mdl-cell--2-col" onclick=getMe.starPush('+stage+')>' +
               "<img src='/public/img/spaceLogo.png'/>" +
             '</div>';
   }

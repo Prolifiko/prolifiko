@@ -21,8 +21,9 @@ var getMe = (function(){
 
   var userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
 
-  var starPush = function () {
-    userStatus.steps.push(true);
+  var starPush = function (stage) {
+    if (stage && userStatus.steps[stage]) { return; }
+    if (stage) { userStatus.steps.push(true); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
     standardRequest(function (req) {}, '/starPush', 'POST')();

@@ -15,12 +15,14 @@ function contentHandler (step) {
       var prev = '/step' + step + '/' + (+stage - 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       reply.view('content', {
+        button: button,
         text: content.text,
         next: next,
         prev: prev,
         src: src,
         title: content.title,
         star: star,
+        stage: stage,
         hoorah: hoorah
       });
     });
