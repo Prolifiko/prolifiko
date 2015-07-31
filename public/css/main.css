@@ -1,35 +1,18 @@
-*{
-  border: 1px dotted black;
+.mdl-grid{
+  margin: 0 auto;
+  text-align: center;
 }
 
-/*#content-welcome-tour img {
-  height: 7em;
-  width: 7em;
-  margin: auto;
-}*/
-
-.auto{
-  margin: 0 auto;
+button {
   width: 100%;
 }
 
-.mdl-card__title-text{
-  margin: 0 auto;
+.mdl-layout{
+  height: 100vh;
 }
 
-.card-square.mdl-card {
-  width: 325px;
-  height: 450px;
-}
-.card-square > .mdl-card__title {
-  color: #fff;
-  background:
-    url('/public/img/blackProlifiko.png') bottom right 15% no-repeat ;
-}
-
-.welcomeTour {
-  display: flex;
-  justify-content: center;
+.logo img{
+  height: 100px;
 }
 
 .dates{
