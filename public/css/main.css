@@ -2,20 +2,23 @@
   /*border: 1px dotted black;*/
 }
 
-html {
-  background-color: #FFFFFF;
-  text-align: center;
+.auto{
+  margin: 0 auto;
+  width: 100%;
 }
 
-#content-welcome-tour img {
-  height: 10em;
-  width: 10em;
-  margin: auto;
+.center{
+  margin: 0 auto;
 }
 
-.welcomeTour {
-  display: flex;
-  justify-content: center;
+.card-square.mdl-card {
+  width: 325px;
+  height: 450px;
+}
+.card-square > .mdl-card__title {
+  color: #fff;
+  background:
+    url('/public/img/blackProlifiko.png') bottom right 15% no-repeat ;
 }
 
 .dates{
