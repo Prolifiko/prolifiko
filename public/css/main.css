@@ -1,6 +1,7 @@
-/**{
-  border: 1px dotted black;
-}*/
+*{
+  /*border: 1px dotted black;*/
+}
+
 .content {
   padding: 10px;
 }
@@ -16,6 +17,11 @@
 .auto{
   margin: 0 auto;
   text-align: center;
+}
+
+.stars{
+  height: 8vh;
+
 }
 
 .inline{
@@ -45,5 +51,9 @@
 
 .success{
   background-color: #FFF835;
-  border-radius: 50%;
+  /*border-radius: 50%;*/
+}
+
+.grey{
+  color: grey;
 }

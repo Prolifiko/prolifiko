@@ -14,7 +14,8 @@ var getMe = (function(){
   }
 
   function starPush (step) {
-    if (step && userStatus.steps[step]) { return; }
+    console.log(step, userStatus);
+    if (step && userStatus.steps[step - 1]) { return; }
     if (typeof step === 'number') { userStatus.steps.push(step); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
@@ -36,14 +37,13 @@ var getMe = (function(){
   }
 
   function totalRender () {
-    console.log('jdkfjd;');
     document.getElementById('streak').innerHTML = userStatus.timestamps.length;
   }
 
   function isYellow () {
     var star = document.getElementsByClassName('star')[0];
     var step = star.id.split('star')[1];
-    if (userStatus.steps[step]) {
+    if (userStatus.steps[step - 1]) {
       star.className += ' success';
       star.src = '/public/img/spaceLogo.png';
     }

@@ -28,17 +28,14 @@
     {{/if}}
   </div>
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--2-col">
       {{#if src}}
-        <img src={{src}} />
+        <img class={{type}} src={{src}} />
       {{/if}}
-    </div>
   </div>
   <div class="mdl-card__supporting-text">
     {{{renderText}}}
   </div>
   {{{star}}}
-
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--1-col"></div>
       <form action={{next}}>
