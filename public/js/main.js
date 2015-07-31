@@ -25,7 +25,7 @@ var getMe = (function(){
     userStatus.steps.push(true);
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
-    standardRequest(function (req) {}, '/starPush/' + userStatus._id, 'POST')();
+    standardRequest(function (req) {}, '/starPush', 'POST')();
   };
 
   function starYellower () {

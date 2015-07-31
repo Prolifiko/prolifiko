@@ -106,7 +106,7 @@ var routes = [
 
   {
     method: 'POST',
-    path: '/starPush/{id}',
+    path: '/starPush',
     handler: mongo.starRequest,
   }
 

@@ -28,6 +28,7 @@ function getMonday () {
 }
 
 function dayAdjust (day) {
+  /* istanbul ignore next */
   if (day === 0) return 6;
   else return day - 1;
 }
