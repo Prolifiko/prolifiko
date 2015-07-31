@@ -13,6 +13,10 @@ function contentHandler (step) {
       if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
+      if (+stage +1 === data.content.length){
+        button= "My Progress";
+        next = "/progress";
+      }
       reply.view('content', {
         button: button,
         text: content.text,
