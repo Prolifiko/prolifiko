@@ -22,12 +22,21 @@ var getMe = (function(){
     standardRequest(function (req) {}, '/starPush', 'POST')();
   }
 
+  function calendarPrep () {
+    starYellower();
+    totalRender();
+  }
+
   function starYellower () {
     userStatus.timestamps.forEach( function (time) {
       var dayStart = new Date((new Date(time).toDateString())).getTime();
       var day = document.getElementById(dayStart + '');
       if (day.className.indexOf('success') === -1) { day.className += ' success'; }
     });
+  }
+
+  function totalRender () {
+    document.getElementById('streak').innerHTML = userStatus.timestamps.length;
   }
 
   function isYellow () {
@@ -57,7 +66,7 @@ var getMe = (function(){
   userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
   try { isYellow(); } catch (e) {}
 
-  if (window.location.href.indexOf('alendar') > -1){ starYellower(); }
+  if (window.location.href.indexOf('alendar') > -1){ calendarPrep(); }
   if (window.location.href.indexOf('progress') > -1){ stepActivate(); }
 
   return {
