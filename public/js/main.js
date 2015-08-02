@@ -24,7 +24,7 @@ var getMe = (function(){
     var star = document.getElementsByClassName('habitStar')[0];
       if(clickedToday()){
         star.className += ' success2';
-        star.src = '/public/img/spaceLogo.png';
+        star.style['background-image'] = '/public/img/spaceLogo.png';
       }
   }
 
@@ -60,7 +60,7 @@ var getMe = (function(){
     var step = star.id.split('star')[1];
     if (userStatus.steps[step - 1]) {
       star.className += ' success2';
-      star.src = '/public/img/spaceLogo.png';
+      star.style['background-image'] = '/public/img/spaceLogo.png';
     }
   }
 

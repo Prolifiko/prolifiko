@@ -45,3 +45,11 @@
   max-width: 80vw;
   max-height: 8vh;
 }
+
+.starButton{
+  width: 220px;
+   height: 220px;
+   background-image: url(/public/img/spaceLogo.png);
+   background-repeat: no-repeat;
+   background-color: white
+}
