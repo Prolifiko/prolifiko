@@ -15,7 +15,7 @@ function generateVertical (day) {
   });
   result += pasts.map(function (time) {
     var day = new Date(time);
-    var dayId = new Date(day.toDateString()).getTime();
+    var dayId = day.toDateString();
     return '<div class="auto" id="'+dayId+'">'+day.getDate()+'</div>';
   }).join('');
   return result + '</div>';

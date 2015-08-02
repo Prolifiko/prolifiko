@@ -45,7 +45,7 @@ var getMe = (function(){
 
   function starYellower () {
     userStatus.timestamps.forEach( function (time) {
-      var dayStart = new Date((new Date(time).toDateString())).getTime();
+      var dayStart = new Date(time).toDateString();
       var day = document.getElementById(dayStart + '');
       if (day.className.indexOf('success') === -1) { day.className += ' success'; }
     });
@@ -83,7 +83,7 @@ var getMe = (function(){
   try { isYellow(); } catch (e) {}
   try { habitYellower(); } catch (e) {}
 
-  if (window.location.href.indexOf('alendar') > -1){ calendarPrep(); }
+  if (window.location.href.indexOf('calendar') > -1){ calendarPrep(); }
   if (window.location.href.indexOf('progress') > -1){ stepActivate(); }
 
   return {
