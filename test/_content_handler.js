@@ -1,6 +1,6 @@
 var test = require('tape');
 var server = require('../api/server.js');
-var fs = require('fs');//
+var fs = require('fs');
 
 test('testing welcome tour content route', function (t) {
   server.inject({method: 'GET', url: '/step1/1'}, function (response) {
