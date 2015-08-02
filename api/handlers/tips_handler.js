@@ -22,7 +22,7 @@ function tipsHandler (step) {
         title: content.title,
         star: star,
         step: step,
-        type:  type,
+        type: '',
         title_header: data.titleHeader + progress
       });
     });
