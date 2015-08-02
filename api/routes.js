@@ -5,6 +5,7 @@ var calendar_handler = require('./handlers/calendar_handler.js');
 var legal_handler = require('./handlers/legal_handler.js');
 var hurrah_handler = require('./handlers/hurrah_handler.js');
 var content_handler = require('./handlers/content_handler.js');
+var habit_handler = require('./handlers/habit_handler.js');
 var progress_handler = require('./handlers/progress_handler');
 var google = require('./handlers/google_handlers');
 var mongo = require('./handlers/mongo_handlers');
@@ -106,6 +107,12 @@ var routes = [
     method: 'GET',
     path: '/stepTips/{stage?}',
     handler: content_handler('Tips')
+  },
+
+  {
+    method: 'GET',
+    path: '/stepHabit',
+    handler: habit_handler()   
   },
 
   {

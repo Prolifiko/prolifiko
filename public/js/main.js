@@ -13,12 +13,28 @@ var getMe = (function(){
     };
   }
 
+  function clickedToday() {
+    var today = new Date().getDate();
+    return userStatus.timestamps.some(function(timestamp){
+      return new Date(timestamp).getDate() === today;
+    });
+  }
+
+  function habitYellower () {
+    var star = document.getElementsByClassName('habitStar')[0];
+      if(clickedToday()){
+        star.className += ' success2';
+        star.src = '/public/img/spaceLogo.png';
+      }
+  }
+
   function starPush (step) {
     if (step && userStatus.steps[step - 1]) { return; }
     if (typeof step === 'number') { userStatus.steps.push(step); }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
-    isYellow();
+    try { isYellow(); } catch (e) {}
+    try { habitYellower(); } catch (e) {}
     standardRequest(function (req) {}, '/starPush', 'POST')();
   }
 
@@ -65,6 +81,7 @@ var getMe = (function(){
   getMe();
   userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
   try { isYellow(); } catch (e) {}
+  try { habitYellower(); } catch (e) {}
 
   if (window.location.href.indexOf('calendar') > -1){ calendarPrep(); }
   if (window.location.href.indexOf('progress') > -1){ stepActivate(); }
