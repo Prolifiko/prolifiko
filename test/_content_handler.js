@@ -20,7 +20,7 @@ test('no param gives same as "step1/0"', function (t) {
 
 test('penultimate page of step1 gives a star', function (t) {
   server.inject({method: 'GET', url: '/step1/4'}, function (response) {
-    t.equal(isInBody(response.result, 'img src'), true);
+    t.equal(isInBody(response.result, 'starButton'), true);
     t.end();
   });
 });
