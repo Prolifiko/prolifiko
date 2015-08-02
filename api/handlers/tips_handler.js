@@ -7,9 +7,8 @@ function tipsHandler (step) {
       var stage = request.params.stage || '0';
       var content = data.content[stage];
       var star = false;
-      var type = 'screen';
       if (+stage === data.content.length - 1) { star = true; }
- 	  var next = '/step' + step + '/' + (+stage + 1);
+ 	    var next = '/step' + step + '/' + (+stage + 1);
       var progress = ' ' + (+stage + 1) + '/' + data.content.length;
       if (+stage +1 === data.content.length){
         button= "My Progress";
@@ -19,11 +18,11 @@ function tipsHandler (step) {
         button: button,
         text: content.text,
         next: next,
-        src: '',
+        src: false,
         title: content.title,
         star: star,
         step: step,
-        type:  type,
+        type: '',
         title_header: data.titleHeader + progress
       });
     });

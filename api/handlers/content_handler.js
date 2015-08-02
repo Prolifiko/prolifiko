@@ -11,7 +11,7 @@ function contentHandler (step) {
       var type = 'screen';
       if (+stage === data.content.length - 2) { star = true; }
       /*istanbul ignore next*/
-      if (+stage === data.content.length - 1) { hoorah = true; }
+      if (+stage === data.content.length - 1 && step !== 'Bonus') { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
       var progress = ' ' + (+stage + 1) + '/' + data.content.length;
