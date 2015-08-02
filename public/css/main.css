@@ -46,7 +46,7 @@
   max-height: 8vh;
 }
 
-.starButton{
+.starButton, .habitStar{
   width: 220px;
    height: 220px;
    background-image: url(/public/img/spaceLogo.png);
@@ -54,4 +54,3 @@
    background-color: white;
    display: block;
    margin: 10px auto;
-}

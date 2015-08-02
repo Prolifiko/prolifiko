@@ -24,7 +24,8 @@ var getMe = (function(){
     var star = document.getElementsByClassName('habitStar')[0];
       if(clickedToday()){
         star.className += ' success2';
-        star.style['background-image'] = '/public/img/spaceLogo.png';
+        star.style['background-image'] = 'url(/public/img/spaceLogo.png)';
+        console.log(star.style, star.style['background-image']);
       }
   }
 
@@ -56,11 +57,10 @@ var getMe = (function(){
   }
 
   function isYellow () {
-    var star = document.getElementsByClassName('star')[0];
-    var step = star.id.split('star')[1];
-    if (userStatus.steps[step - 1]) {
+    var star = document.getElementsByClassName('starButton')[0];
+    if (userStatus.steps[star.id - 1]) {
       star.className += ' success2';
-      star.style['background-image'] = '/public/img/spaceLogo.png';
+      star.style['background-image'] = 'url(/public/img/spaceLogo.png)';
     }
   }
 
