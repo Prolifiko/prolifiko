@@ -1,0 +1,23 @@
+<div class='auto content'>
+  {{#if title}}
+    <h2>{{title}}</h2>
+  {{/if}}
+
+  <div>
+    {{{renderText}}}
+  </div>
+
+  <div onclick=getMe.starPush()>
+    <img src='/public/img/unclicked.png' class='habitStar' id='star'>
+  </div>
+
+  <p> abovethis </p>
+
+
+  <form action={{next}}>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+      {{button}}
+    </button>
+  </form>
+
+</div>
