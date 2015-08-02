@@ -1,8 +1,6 @@
 module.exports = function (context) {
   if (context.data.root.star){
     var step = context.data.root.step;
-    return "<div onclick=getMe.starPush("+step+")>" +
-              "<img src='/public/img/unclicked.png' class='star' id='star" + step + "'>" +
-            "</div>";
+    return '<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect starButton" onclick="getMe.starPush('+ step + ')">';
   }
 };

@@ -4,7 +4,7 @@ function contentHandler (step) {
   return function (request, reply) {
     mongo.findContent('step' + step, function(err, data){
       var button = 'Continue';
-      var stage = request.params.stage || 0;
+      var stage = request.params.stage || '0';
       var content = data.content[stage];
       var star = false;
       var hoorah = false;
@@ -14,6 +14,7 @@ function contentHandler (step) {
       if (+stage === data.content.length - 1) { hoorah = true; }
       var next = '/step' + step + '/' + (+stage + 1);
       var src = content.screenshot ? '/' + content.screenshot : false;
+      var progress = ' ' + (+stage + 1) + '/' + data.content.length;
       if (!src){
         if(hoorah){
           src = "/public/img/" + step + "star.png";
@@ -34,7 +35,7 @@ function contentHandler (step) {
         step: step,
         hoorah: hoorah,
         type:  type,
-        title_header: data.titleHeader
+        title_header: data.titleHeader + progress
       });
     });
   };
