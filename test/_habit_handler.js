@@ -5,8 +5,8 @@ var fs = require('fs');
 
 test('habit page has a star on it', function(t) {
 	server.inject({method: 'GET', url: '/stepHabit'}, function(response) {
-    t.equal(response.statusCode, 200); 
-    t.equal(isInBody(response.result, "class='habitStar'"), true);
+    t.equal(response.statusCode, 200);
+    t.equal(isInBody(response.result, "habitStar"), true);
     t.end();
   });
 });
