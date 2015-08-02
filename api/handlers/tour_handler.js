@@ -7,6 +7,7 @@ function tour_handler (request, reply){
     var content = data.content[stage];
     var nextStep = '/tour/' + (+stage + 1);
     /* istanbul ignore next */
+    var src = content.screenshot ? '/' + content.screenshot : false;
     if (+stage + 1 === data.content.length) {
       button = 'Sign Up';
       nextStep = '/progress';
