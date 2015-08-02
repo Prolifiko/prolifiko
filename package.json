@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm run coverage && npm run jshint",
+    "test": "./node_modules/tape/bin/tape ./test/*.js | tap-nyan && npm run coverage && npm run jshint",
     "coverage": "istanbul cover ./node_modules/tape/bin/tape ./test/*.js && istanbul check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "jshint": "jshint --exclude-path .gitignore .",
     "start": "node app.js",
@@ -15,7 +15,7 @@
     "watch": "nodemon --watch views --ext html --exec 'npm start'",
     "import-db": "mongo prolifiko --eval 'db.content.drop()' && mongoimport --db prolifiko --collection content --type json --file content/content.json --jsonArray",
     "update-content-trav": "travis encrypt-file content/content.json content/content.json.enc",
-    "rundb":"mongod --dbpath=./data --port 27017"
+    "rundb": "mongod --dbpath=./data --port 27017"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
     "shot": "^1.5.3",
+    "tap-nyan": "0.0.2",
     "tape": "^4.0.1"
   }
 }
