@@ -118,6 +118,19 @@ var routes = [
 
   {
     method: 'GET',
+    path: '/info/{param*}',
+    config: {
+      handler: {
+        directory: {
+          path: 'public/html'
+        }
+      },
+      auth: false,
+    }
+  },
+
+  {
+    method: 'GET',
     path: '/calendar',
     handler: calendar_handler
   },

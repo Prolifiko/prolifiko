@@ -1,6 +1,6 @@
 var mongo = require('./mongo_content');
 
-function contentHandler (step) {
+function habitHandler (step) {
   return function (request, reply) {
     mongo.findContent('stepHabit', function(err, data){
       var button = 'My Progress';
@@ -20,4 +20,4 @@ function contentHandler (step) {
   };
 }
 
-module.exports = contentHandler;
+module.exports = habitHandler;
