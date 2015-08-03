@@ -49,8 +49,9 @@
 .starButton, .habitStar{
   width: 180px;
    height: 180px;
-   background-image: url(/public/img/spaceLogo.png);
+   background-image: url(/public/img/unclicked.png);
    background-repeat: no-repeat;
    background-color: white;
    display: block;
    margin: 10px auto;
+ }
