@@ -18,6 +18,24 @@ test('The info handler return the privacy policy page as expected', function (t)
   });  
 });
 
+test('The info handler return the About us page as expected', function (t) {
+  server.inject({method:'GET', url:'/info/aboutUs.html'},function (response) {
+    var page = fs.readFileSync(__dirname + '/../public/html/aboutUs.html', 'utf-8');
+    t.equal(isInBody(response.result, page), true);
+    t.end();
+  });  
+});
+
+test('The info handler return the About Prolifiko page as expected', function (t) {
+  server.inject({method:'GET', url:'/info/about.html'},function (response) {
+    var page = fs.readFileSync(__dirname + '/../public/html/about.html', 'utf-8');
+    t.equal(isInBody(response.result, page), true);
+    t.end();
+  });  
+});
+
+
+
 
 function isInBody (x, y) {
   return x.indexOf(y) !== -1;
