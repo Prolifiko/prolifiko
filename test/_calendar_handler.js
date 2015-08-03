@@ -3,6 +3,10 @@ var server = require('../api/server.js');
 var fs = require('fs');
 
 
+server.ext('onPreAuth', function (request, reply) {
+  request.state.sid = {id: 23};
+  reply.continue();
+});
 
 test('testing calendar route', function (t) {
   server.inject({method: 'GET', url: '/calendar'}, function (response) {
