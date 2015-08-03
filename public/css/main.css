@@ -55,3 +55,7 @@
    display: block;
    margin: 10px auto;
  }
+
+ .calendar {
+   margin: 0 0 5vh 0;
+ }
