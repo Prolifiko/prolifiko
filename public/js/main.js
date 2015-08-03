@@ -25,13 +25,12 @@ var getMe = (function(){
       if(clickedToday()){
         star.className += ' success2';
         star.style['background-image'] = 'url(/public/img/spaceLogo.png)';
-        console.log(star.style, star.style['background-image']);
       }
   }
 
   function starPush (step) {
-    if (step && userStatus.steps[step - 1]) { return; }
-    if (typeof step === 'number') { userStatus.steps.push(step); }
+    if (step && userStatus.steps[step]) { return; }
+    if (step !== undefined) { userStatus.steps[step] = true; }
     userStatus.timestamps.push(Date.now());
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
     try { isYellow(); } catch (e) {}
@@ -58,7 +57,7 @@ var getMe = (function(){
 
   function isYellow () {
     var star = document.getElementsByClassName('starButton')[0];
-    if (userStatus.steps[star.id - 1]) {
+    if (userStatus.steps[star.id]) {
       star.className += ' success2';
       star.style['background-image'] = 'url(/public/img/spaceLogo.png)';
     }
