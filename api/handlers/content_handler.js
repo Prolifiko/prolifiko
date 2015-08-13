@@ -35,7 +35,8 @@ function contentHandler (step) {
         step: step,
         hoorah: hoorah,
         type:  type,
-        title_header: data.titleHeader + progress
+        title_header: data.titleHeader,
+        stepNumber:progress
       });
     });
   };
