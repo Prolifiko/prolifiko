@@ -5,6 +5,7 @@ function tipsHandler (step) {
     mongo.findContent('step' + step, function(err, data){
       var button = 'Continue';
       var stage = request.params.stage || '0';
+      var src = content.screenshot ? '/' + content.screenshot : false;
       var content = data.content[stage];
       var star = false;
       if (+stage === data.content.length - 1) { star = true; }
@@ -18,7 +19,7 @@ function tipsHandler (step) {
         button: button,
         text: content.text,
         next: next,
-        src: false,
+        src: src,
         title: content.title,
         star: star,
         step: step,
