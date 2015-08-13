@@ -113,7 +113,7 @@ var routes = [
   {
     method: 'GET',
     path: '/stepHabit',
-    handler: habit_handler()   
+    handler: habit_handler('Habit')   
   },
 
   {

@@ -25,7 +25,9 @@ function tipsHandler (step) {
         star: star,
         step: step,
         type: '',
-        title_header: data.titleHeader + progress
+        title_header: data.titleHeader,
+        stepNumber:progress
+
       });
     });
   };
