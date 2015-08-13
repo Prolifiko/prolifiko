@@ -44,6 +44,7 @@
 .screen {
   max-width: 80vw;
   max-height: 8vh;
+  margin: 0 0 4vh 0;
 }
 
 .starButton, .habitStar{
@@ -55,6 +56,17 @@
    display: block;
    margin: 10px auto;
  }
+.tourImage{
+  border: 2px solid #9E9E9E;
+}
+
+.link{
+  color: #9E9E9E;
+}
+
+ul {
+  text-align: left;
+}
 
  .calendar {
    margin: 0 0 5vh 0;
