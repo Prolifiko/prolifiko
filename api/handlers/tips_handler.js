@@ -6,6 +6,7 @@ function tipsHandler (step) {
       var button = 'Continue';
       var stage = request.params.stage || '0';
       var content = data.content[stage];
+      /*istanbul ignore next*/
       var src = content.screenshot ? '/' + content.screenshot : false;
       var star = false;
       if (+stage === data.content.length - 1) { star = true; }
