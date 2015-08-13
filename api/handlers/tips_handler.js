@@ -6,6 +6,7 @@ function tipsHandler (step) {
       var button = 'Continue';
       var stage = request.params.stage || '0';
       var content = data.content[stage];
+      var src = content.screenshot ? '/' + content.screenshot : false;
       var star = false;
       if (+stage === data.content.length - 1) { star = true; }
  	    var next = '/step' + step + '/' + (+stage + 1);
@@ -18,7 +19,7 @@ function tipsHandler (step) {
         button: button,
         text: content.text,
         next: next,
-        src: false,
+        src: src,
         title: content.title,
         star: star,
         step: step,
