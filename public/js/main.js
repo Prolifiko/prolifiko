@@ -35,7 +35,9 @@ var getMe = (function(){
     localStorage.setItem('prolifiko-me', JSON.stringify(userStatus));
     try { isYellow(); } catch (e) {}
     try { habitYellower(); } catch (e) {}
-    standardRequest(function (req) {}, '/starPush', 'POST')();
+    if(step !== 'Bonus' && step !== 'Tips' && step !== 'Habit' ){
+      standardRequest(function (req) {}, '/starPush', 'POST')();
+    }
   }
 
   function calendarPrep () {
@@ -80,7 +82,7 @@ var getMe = (function(){
   getMe();
   userStatus = JSON.parse(localStorage.getItem('prolifiko-me'));
   try { isYellow(); } catch (e) {}
-  try { habitYellower(); } catch (e) {}
+  // try { habitYellower(); } catch (e) {}
 
   if (window.location.href.indexOf('calendar') > -1){ calendarPrep(); }
   if (window.location.href.indexOf('progress') > -1){ stepActivate(); }
